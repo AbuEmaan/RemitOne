@@ -5,12 +5,12 @@
       {
         "name": "user logs in with his credentials \"dummy@remitone.com\" and \"Password1\"",
         "aggregatedDurations": {
-          "average": 4.468694505,
-          "median": 4.468694505
+          "average": 8.26513057,
+          "median": 8.26513057
         },
         "durations": [
           {
-            "duration": 4.468694505,
+            "duration": 8.26513057,
             "location": "myFirst.feature:9"
           }
         ]
@@ -23,12 +23,12 @@
       {
         "name": "user clicks the \"Login\" link",
         "aggregatedDurations": {
-          "average": 0.90120356,
-          "median": 0.90120356
+          "average": 1.840394692,
+          "median": 1.840394692
         },
         "durations": [
           {
-            "duration": 0.90120356,
+            "duration": 1.840394692,
             "location": "myFirst.feature:8"
           }
         ]
@@ -41,12 +41,12 @@
       {
         "name": "user is on the \"orm\" landing page",
         "aggregatedDurations": {
-          "average": 2.976484258,
-          "median": 2.976484258
+          "average": 7.620135716,
+          "median": 7.620135716
         },
         "durations": [
           {
-            "duration": 2.976484258,
+            "duration": 7.620135716,
             "location": "myFirst.feature:7"
           }
         ]

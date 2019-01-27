@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 4968831068,
+  "duration": 23612787953,
   "status": "passed"
 });
 formatter.scenario({
@@ -55,7 +55,7 @@ formatter.match({
   "location": "RemitOneStepDefinitions.user_is_on_the_landing_page(String)"
 });
 formatter.result({
-  "duration": 2976484258,
+  "duration": 7620135716,
   "status": "passed"
 });
 formatter.match({
@@ -68,7 +68,7 @@ formatter.match({
   "location": "RemitOneStepDefinitions.user_clicks_the_link(String)"
 });
 formatter.result({
-  "duration": 901203560,
+  "duration": 1840394692,
   "status": "passed"
 });
 formatter.match({
@@ -85,11 +85,11 @@ formatter.match({
   "location": "RemitOneStepDefinitions.user_logs_in_with_his_credentials(String,String)"
 });
 formatter.result({
-  "duration": 4468694505,
+  "duration": 8265130570,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23734,
+  "duration": 39227,
   "status": "passed"
 });
 });
