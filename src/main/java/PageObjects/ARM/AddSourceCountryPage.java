@@ -7,15 +7,22 @@ import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import TestContext.TestContext;
+
 
 
 
 public class AddSourceCountryPage {
 	
+	private WebDriver wbdriver;
+	private TestContext testContext;
+	
 	// initialise the page elements when the class is instantiated
-	public AddSourceCountryPage(WebDriver driver)
+	public AddSourceCountryPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
+		wbdriver = driver;
+		testContext = context;
 	}
 	
 		

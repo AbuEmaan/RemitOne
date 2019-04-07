@@ -6,19 +6,21 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
+import TestContext.TestContext;
 
 
 
 public class SetDestinationConversionRate {
 	
-	WebDriver wbDriver;
+	private WebDriver wbDriver;
+	private TestContext testContext;
 	
 	// initialise the page elements when the class is instantiated
-	public SetDestinationConversionRate(WebDriver driver)
+	public SetDestinationConversionRate(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
-		this.wbDriver= driver;
+		wbDriver = driver;
+		testContext = context;
 	}
 	
 		

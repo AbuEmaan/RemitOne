@@ -1,15 +1,20 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.PageFactory;
 public class PreferencesPage {
 	
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	// initialise the page elements when the class is instantiated
-	public PreferencesPage(WebDriver driver)
+	public PreferencesPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
+		wbdriver = driver;
+		testContext = context;
 	}
 	
 		

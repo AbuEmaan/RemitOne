@@ -1,6 +1,7 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 
 import java.util.List;
 
@@ -12,12 +13,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AddProcessingBankPage {
 
-	WebDriver wbDriver;
+	private WebDriver wbdriver;
+	private TestContext testContext;
 
 	// initialise the page elements when the class is instantiated
-	public AddProcessingBankPage(WebDriver driver) {
+	public AddProcessingBankPage(WebDriver driver, TestContext context) {
 		PageFactory.initElements(driver, this);
-		this.wbDriver = driver;
+		wbdriver = driver;
+		testContext = context;
 	}
 
 	@FindBy(how = How.ID, using = "menu-procBanks")
@@ -109,7 +112,7 @@ public class AddProcessingBankPage {
 
 	public void selectValueFromDropDown(String id, String valueToSelect) {
 
-		List<WebElement> options = this.wbDriver.findElements(By.xpath("//select[@id ='" + id + "']/option"));
+		List<WebElement> options = this.wbdriver.findElements(By.xpath("//select[@id ='" + id + "']/option"));
 
 		for (WebElement option : options) {
 			System.out.println(option.getText());

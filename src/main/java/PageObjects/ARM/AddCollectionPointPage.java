@@ -1,6 +1,8 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
+
 
 import java.util.List;
 
@@ -16,12 +18,14 @@ import org.openqa.selenium.support.ui.Select;
 public class AddCollectionPointPage {
 	
 	
-	WebDriver wbDriver;
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	// initialise the page elements when the class is instantiated
-	public AddCollectionPointPage(WebDriver driver)
+	public AddCollectionPointPage(WebDriver driver , TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
-		this.wbDriver=driver;
+		wbdriver = driver;
+		testContext = context;
 	}
 	
 		
@@ -63,7 +67,7 @@ public class AddCollectionPointPage {
 	public WebElement textSuccessMsg;
 	
 	
-	public void setCollectionPoint(String CPName, String CPBankName, String CPCode,  String CPAddress, String CPCity, String CPState ) throws InterruptedException
+	public void setCollectionPoint(String CPName,   String CPBankName, String CPCode, String CPAddress, String CPCity, String CPState ) throws InterruptedException
 	{
 		
 		linkSettings.click();
@@ -72,12 +76,10 @@ public class AddCollectionPointPage {
 		linkAddCollectionPoint.click();
 
 		inputCPName.sendKeys(CPName);
-		
-		CPBankName = "test bank";		
+
 		selectValueFromDropDown("bank", CPBankName);
 		
 		inputCPCode.sendKeys(CPCode);
-		
 		inputCPaddress.sendKeys(CPAddress);
 		inputCPState.sendKeys(CPCity);
 		inputCPCity.sendKeys(CPState);
@@ -102,7 +104,7 @@ public class AddCollectionPointPage {
 	{
 		
 		
-		List<WebElement> options = this.wbDriver.findElements(By.xpath("//select[@name ='"+id+"']/option"));
+		List<WebElement> options = wbdriver.findElements(By.xpath("//select[@name ='"+id+"']/option"));
 
 		for (WebElement option : options) {
 			System.out.println(option.getText());

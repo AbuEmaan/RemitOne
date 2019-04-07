@@ -1,6 +1,7 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 
 import java.util.List;
 
@@ -19,11 +20,13 @@ public class AddDestinationCountryPage {
 	
 	
 	private WebDriver wbdriver;
+	private TestContext testContext;
 	HelperFunctions helper = new HelperFunctions();
 	// initialise the page elements when the class is instantiated
-	public AddDestinationCountryPage(WebDriver driver)
+	public AddDestinationCountryPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
+		testContext = context;
 		wbdriver = driver;
 		
 		

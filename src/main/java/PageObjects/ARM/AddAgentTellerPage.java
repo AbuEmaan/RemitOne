@@ -1,6 +1,7 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
@@ -11,11 +12,15 @@ import org.openqa.selenium.support.ui.Select;
 
 
 public class AddAgentTellerPage {
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	
 	// initialise the page elements when the class is instantiated
-	public AddAgentTellerPage(WebDriver driver)
+	public AddAgentTellerPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
+		wbdriver = driver;
+		testContext = context;
 	}
 	
 		

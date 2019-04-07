@@ -16,19 +16,21 @@ import org.openqa.selenium.support.ui.Select;
 
 import Helpers.HelperFunctions;
 import Helpers.HelperFunctions.*;
-
+import TestContext.TestContext;
 
 
 
 
 public class CreateBankerTellerPage {
 	
-	WebDriver wbdriver;
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	// initialise the page elements when the class is instantiated
-	public CreateBankerTellerPage(WebDriver driver)
+	public CreateBankerTellerPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
 		wbdriver = driver;
+		testContext = context;
 	}
 	
 	HelperFunctions helper = new HelperFunctions();

@@ -1,15 +1,21 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 public class LoginPage {
 	
+	
+	private WebDriver driver;
+	private TestContext testContext;
 	// initialise the page elemnts when the class is instantiated
-	public LoginPage(WebDriver driver)
+	public LoginPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
+		this.driver = driver;
+		testContext = context;
 	}
 	
 	
@@ -38,6 +44,9 @@ public class LoginPage {
 		txtbx_username.sendKeys(username);
 		txtbx_Password.sendKeys(password);
 		btn_login.click();
+		
+		if(driver.findElements(By.name("skip")).size()!=0)
+			driver.findElement(By.name("skip")).click();
 				
 	}
 	

@@ -1,6 +1,7 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -14,21 +15,24 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.Select;
 
+import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 import Helpers.HelperFunctions;
-import Helpers.HelperFunctions.*;
-
+import java.util.List;
 
 
 
 
 public class AddRemitterPage {
 	
-	WebDriver wbdriver;
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	// initialise the page elements when the class is instantiated
-	public AddRemitterPage(WebDriver driver)
+	public AddRemitterPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
 		wbdriver = driver;
+		testContext = context;
 	}
 	
 	HelperFunctions helper = new HelperFunctions();
@@ -90,7 +94,7 @@ public class AddRemitterPage {
 	
 	
 	
-	public void addRemitter(String fname, String lname,String gender, String dob, String address1, String postcode,String nationality, String telephone,String mobile,String email,String address2,String idType,String idTypeDetails, String idexpiryDate) throws InterruptedException, AWTException
+	public void addRemitter(String fname, String lname,String gender, String dob, String address1, String postcode,String nationality, String telephone,String mobile,String email,String address2,String idType,String idTypeDetails, String idexpiryDate,String agent, String uploadImage, String RemitterCountry, String userType ) throws InterruptedException, AWTException
 	{
 		
 		linkMembers.click();
@@ -105,8 +109,11 @@ public class AddRemitterPage {
 		Select ddNationality = new Select(Nationality);
 		ddNationality.selectByVisibleText(nationality);
 		
+		
+		
 		inputAddress1.sendKeys(address1);
 		inputPostcode.sendKeys(postcode);
+		helper.selectValueFromDropDown("country", RemitterCountry, wbdriver);
 	
 		WebElement Gender = wbdriver.findElement(By.name("gender"));
 		
@@ -119,10 +126,15 @@ public class AddRemitterPage {
 		inputEmail.sendKeys(email);
 		inputAddress2.sendKeys(address2);		
 		
+		
+		
 		WebElement IDType = wbdriver.findElement(By.name("id1_type"));
 		
 		Select ddIDType = new Select(IDType);
 		ddIDType.selectByVisibleText(idType);
+		
+		
+		
 		
 		inputIDTypeDetails.sendKeys(idTypeDetails);
 		
@@ -131,14 +143,14 @@ public class AddRemitterPage {
 		
 		inputIDScans.click();
 
-		helper.uploadFile("uploadFile.PNG");
+		helper.uploadFile(uploadImage);
 		
 		
 		btnSubmit.click();
 		
 
 		
-		if(!textSuccessMsg.getText().contains("added successfully"))
+		if(!textSuccessMsg.getText().contains("Member Successfully Added"))
 		{
 			
 			Assert.fail("Remitter was not added successfully");

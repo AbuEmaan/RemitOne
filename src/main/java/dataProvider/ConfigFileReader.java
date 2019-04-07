@@ -29,6 +29,12 @@ public class ConfigFileReader {
 				throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
 			}		
 		}
+		
+	    public Properties getProperties()
+	      {
+	         
+	         return properties;
+	      }
 	 
 		public String getDriverPath(){
 			String driverPath = properties.getProperty("driverPath");
@@ -45,7 +51,7 @@ public class ConfigFileReader {
 					throw new RuntimeException("Not able to parse value : " + implicitlyWait + " in to Long");
 				}
 			}
-			return 30;		
+			return 5;		
 		}
 	 
 		public String getApplicationUrl(String site) {

@@ -1,7 +1,6 @@
 package managers;
  
 import org.openqa.selenium.WebDriver;
-
 import PageObjects.ARM.AddAgentTellerPage;
 import PageObjects.ARM.AddCollectionPointPage;
 import PageObjects.ARM.AddDeliveryBankPage;
@@ -18,12 +17,12 @@ import PageObjects.ARM.AddAgentPage;
 import PageObjects.ARM.ORM.QuickRegistrationPage;
 import PageObjects.ARM.ORM.ProfilePage;
 import PageObjects.ARM.ORM.AddBeneficiaryPage;
+import PageObjects.ARM.ORM.SendMoneyProcessPage;
+import PageObjects.ARM.AddDeliveryBankBranchPage;
+import PageObjects.ARM.AddMemberBeneficiaryPage;
+import TestContext.TestContext;
 
 
-
-
- 
- 
 public class PageObjectManager {
  
 	private WebDriver driver;
@@ -54,9 +53,15 @@ public class PageObjectManager {
  
 	private AddAgentPage addAgentPage;
 	
+	private SendMoneyProcessPage sendMoneyProcessPage;
+	
+	private AddDeliveryBankBranchPage addDeliveryBankBranchPage;
+	
 	private AddRemitterPage addRemitterPage;
 	private ProfilePage profilePage;
 	private AddBeneficiaryPage addBeneficiaryPage;
+	
+	private AddMemberBeneficiaryPage addMemberBeneficiaryPage;
 	
 
 	public PageObjectManager(WebDriver driver) {
@@ -67,112 +72,130 @@ public class PageObjectManager {
  
 	
  
-	public HomePage getHomePage(){
+	public HomePage getHomePage(TestContext testContext){
  
-		return (homePage == null) ? homePage = new HomePage(driver) : homePage;
+		return (homePage == null) ? homePage = new HomePage(driver,testContext) : homePage;
  
 	}
 	
-	public LoginPage getLoginPage(){
+	public LoginPage getLoginPage(TestContext testContext){
 		 
-		return (loginPage == null) ? loginPage = new LoginPage(driver) : loginPage;
+		return (loginPage == null) ? loginPage = new LoginPage(driver,testContext) : loginPage;
  
 	}
 	
-	public PreferencesPage getPreferencesPage(){
+	public PreferencesPage getPreferencesPage(TestContext testContext){
 		 
-		return (preferencesPage == null) ? preferencesPage = new PreferencesPage(driver) : preferencesPage;
+		return (preferencesPage == null) ? preferencesPage = new PreferencesPage(driver,testContext) : preferencesPage;
  
 	}
 	
-	public AddSourceCountryPage getAddSourceCountryPage(){
+	public AddSourceCountryPage getAddSourceCountryPage(TestContext testContext){
 		 
-		return (addSourceCountryPage == null) ? addSourceCountryPage = new AddSourceCountryPage(driver) : addSourceCountryPage;
+		return (addSourceCountryPage == null) ? addSourceCountryPage = new AddSourceCountryPage(driver,testContext) : addSourceCountryPage;
  
 	}
 	
-	public AddDestinationCountryPage getAddDestinationCountryPage(){
+	public AddDestinationCountryPage getAddDestinationCountryPage(TestContext testContext){
 		 
-		return (addDestinationCountryPage == null) ? addDestinationCountryPage = new AddDestinationCountryPage(driver) : addDestinationCountryPage;
+		return (addDestinationCountryPage == null) ? addDestinationCountryPage = new AddDestinationCountryPage(driver,testContext) : addDestinationCountryPage;
  
 	}
 	
 	
-	public SetSourceCoversionRatesPage getSetSourceConversionRatesPage(){
+	public SetSourceCoversionRatesPage getSetSourceConversionRatesPage(TestContext testContext){
 		 
-		return (setSourceCoversionRatesPage == null) ? setSourceCoversionRatesPage = new SetSourceCoversionRatesPage(driver) : setSourceCoversionRatesPage;
+		return (setSourceCoversionRatesPage == null) ? setSourceCoversionRatesPage = new SetSourceCoversionRatesPage(driver,testContext) : setSourceCoversionRatesPage;
  
 	}
 	
 	
-	public SetDestinationConversionRate getSetDestinationConversionRatesPage(){
+	public SetDestinationConversionRate getSetDestinationConversionRatesPage(TestContext testContext){
 		 
-		return (setDestinationConversionRate == null) ? setDestinationConversionRate = new SetDestinationConversionRate(driver) : setDestinationConversionRate;
+		return (setDestinationConversionRate == null) ? setDestinationConversionRate = new SetDestinationConversionRate(driver,testContext) : setDestinationConversionRate;
  
 	}
 	
 	
 	
 	
-	public AddDeliveryBankPage getAddDeliveryBankPage(){
+	public AddDeliveryBankPage getAddDeliveryBankPage(TestContext testContext){
 		 
-		return (addDeliveryBankPage == null) ? addDeliveryBankPage = new AddDeliveryBankPage(driver) : addDeliveryBankPage;
+		return (addDeliveryBankPage == null) ? addDeliveryBankPage = new AddDeliveryBankPage(driver,testContext) : addDeliveryBankPage;
  
 	}
 	
-	public AddCollectionPointPage getAddCollectionPointPage(){
+	public AddCollectionPointPage getAddCollectionPointPage(TestContext testContext){
 		 
-		return (addCollectionPointPage == null) ? addCollectionPointPage = new AddCollectionPointPage(driver) : addCollectionPointPage;
+		return (addCollectionPointPage == null) ? addCollectionPointPage = new AddCollectionPointPage(driver,testContext) : addCollectionPointPage;
  
 	}
 	
-	public AddProcessingBankPage getAddProcessingBankPage(){
+	public AddProcessingBankPage getAddProcessingBankPage(TestContext testContext){
 		 
-		return (addProcessingBankPage == null) ? addProcessingBankPage = new AddProcessingBankPage(driver) : addProcessingBankPage;
+		return (addProcessingBankPage == null) ? addProcessingBankPage = new AddProcessingBankPage(driver,testContext) : addProcessingBankPage;
  
 	}
 	
-	public AddAgentTellerPage getaddAgentTellerPage(){
+	public AddAgentTellerPage getaddAgentTellerPage(TestContext testContext){
 		 
-		return (addAgentTellerPage == null) ? addAgentTellerPage = new AddAgentTellerPage(driver) : addAgentTellerPage;
+		return (addAgentTellerPage == null) ? addAgentTellerPage = new AddAgentTellerPage(driver,testContext) : addAgentTellerPage;
  
 	}
 	
-	public QuickRegistrationPage getQuickRegistrationPage(){
+	public QuickRegistrationPage getQuickRegistrationPage(TestContext testContext){
 		 
-		return (quickRegistrationPage == null) ? quickRegistrationPage = new QuickRegistrationPage(driver) : quickRegistrationPage;
+		return (quickRegistrationPage == null) ? quickRegistrationPage = new QuickRegistrationPage(driver,testContext) : quickRegistrationPage;
  
 	}
 	
-	public AddAgentPage getAddAgentPage(){
+	public AddAgentPage getAddAgentPage(TestContext testContext){
 		 
-		return (addAgentPage == null) ? addAgentPage = new AddAgentPage(driver) : addAgentPage;
+		return (addAgentPage == null) ? addAgentPage = new AddAgentPage(driver,testContext) : addAgentPage;
  
 	}
 	
 	
-	public AddRemitterPage getAddRemitterPage(){
+	public AddRemitterPage getAddRemitterPage(TestContext testContext){
 		 
-		return (addRemitterPage == null) ? addRemitterPage = new AddRemitterPage(driver) : addRemitterPage;
+		return (addRemitterPage == null) ? addRemitterPage = new AddRemitterPage(driver,testContext) : addRemitterPage;
  
 	}
 	
-	
-	public ProfilePage getProfilePage(){
+	public AddMemberBeneficiaryPage getAddMemberBeneficiaryPage(TestContext testContext){
 		 
-		return (profilePage == null) ? profilePage = new ProfilePage(driver) : profilePage;
+		return (addMemberBeneficiaryPage == null) ? addMemberBeneficiaryPage = new AddMemberBeneficiaryPage(driver,testContext) : addMemberBeneficiaryPage;
  
 	}
 	
 	
-	public AddBeneficiaryPage getAddBeneficiaryPage(){
+	public ProfilePage getProfilePage(TestContext testContext){
 		 
-		return (addBeneficiaryPage == null) ? addBeneficiaryPage = new AddBeneficiaryPage(driver) : addBeneficiaryPage;
+		return (profilePage == null) ? profilePage = new ProfilePage(driver,testContext) : profilePage;
  
 	}
 	
 	
+	public AddBeneficiaryPage getAddBeneficiaryPage(TestContext testContext){
+		 
+		return (addBeneficiaryPage == null) ? addBeneficiaryPage = new AddBeneficiaryPage(driver,testContext) : addBeneficiaryPage;
+ 
+	}
 	
+	public SendMoneyProcessPage getSendMoneyProcessPage(TestContext testContext){
+		 
+		return (sendMoneyProcessPage == null) ? sendMoneyProcessPage = new SendMoneyProcessPage(driver,testContext) : sendMoneyProcessPage;
+ 
+	}
+	
+	
+	public AddDeliveryBankBranchPage getAddDeliveryBankBranchPage(TestContext testContext){
+		 
+		return (addDeliveryBankBranchPage == null) ? addDeliveryBankBranchPage = new AddDeliveryBankBranchPage(driver,testContext) : addDeliveryBankBranchPage;
+ 
+	}
+	
+
 	
 	
 

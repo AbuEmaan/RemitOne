@@ -1,35 +1,17 @@
 [
   {
-    "source": "^user logs in with his credentials \"([^\"]*)\" and \"([^\"]*)\"$",
+    "source": "^user enters \"([^\"]*)\" and \"([^\"]*)\"$",
     "steps": [
       {
-        "name": "user logs in with his credentials \"dummy@remitone.com\" and \"Password1\"",
+        "name": "user enters \"brownagent\" and \"Password2\"",
         "aggregatedDurations": {
-          "average": 8.26513057,
-          "median": 8.26513057
+          "average": 9.185818341,
+          "median": 9.185818341
         },
         "durations": [
           {
-            "duration": 8.26513057,
-            "location": "myFirst.feature:9"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^user clicks the \"([^\"]*)\" link$",
-    "steps": [
-      {
-        "name": "user clicks the \"Login\" link",
-        "aggregatedDurations": {
-          "average": 1.840394692,
-          "median": 1.840394692
-        },
-        "durations": [
-          {
-            "duration": 1.840394692,
-            "location": "myFirst.feature:8"
+            "duration": 9.185818341,
+            "location": "Test.feature:6"
           }
         ]
       }
@@ -39,15 +21,37 @@
     "source": "^user is on the \"([^\"]*)\" landing page$",
     "steps": [
       {
-        "name": "user is on the \"orm\" landing page",
+        "name": "user is on the \"arm\" landing page",
         "aggregatedDurations": {
-          "average": 7.620135716,
-          "median": 7.620135716
+          "average": 5.084786447,
+          "median": 5.084786447
         },
         "durations": [
           {
-            "duration": 7.620135716,
-            "location": "myFirst.feature:7"
+            "duration": 6.338321559,
+            "location": "Test.feature:5"
+          },
+          {
+            "duration": 3.831251336,
+            "location": "Test.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the \"([^\"]*)\" page is displayed$",
+    "steps": [
+      {
+        "name": "the \"Current rate to Bangladesh\" page is displayed",
+        "aggregatedDurations": {
+          "average": 0.616946986,
+          "median": 0.616946986
+        },
+        "durations": [
+          {
+            "duration": 0.616946986,
+            "location": "Test.feature:7"
           }
         ]
       }

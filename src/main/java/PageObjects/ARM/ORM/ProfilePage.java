@@ -1,6 +1,7 @@
 package PageObjects.ARM.ORM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 
 import java.awt.AWTException;
 
@@ -16,13 +17,15 @@ import Helpers.HelperFunctions;
 
 public class ProfilePage {
 	
-	WebDriver wbdriver;
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	HelperFunctions helper = new HelperFunctions();
 	// initialise the page elements when the class is instantiated
-	public ProfilePage(WebDriver driver)
+	public ProfilePage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
 		wbdriver = driver;
+		testContext = context;
 	}
 	
 	

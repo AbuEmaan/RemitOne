@@ -1,6 +1,7 @@
 package PageObjects.ARM.ORM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
@@ -12,15 +13,17 @@ import Helpers.HelperFunctions;
 
 public class QuickRegistrationPage {
 	
-	WebDriver wbdriver;
+	private WebDriver wbdriver;
+	private TestContext testContext;
 	HelperFunctions helper = new HelperFunctions();
 	
 	
 	// initialise the page elements when the class is instantiated
-	public QuickRegistrationPage(WebDriver driver)
+	public QuickRegistrationPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
 		wbdriver = driver;
+		testContext = context;
 	}
 	
 	

@@ -6,7 +6,7 @@ Scenario: Quick Registration
     When user clicks the "Register" link
     Then the "Registration" page is displayed
     Then user completes the registration form and submits
-      | dummy@remitone.com | Password1 | Password1 | Dean | Smith | 19/05/1972 | 77 244 133 |
+      | dummy@remitone.com | Password1 | Password1 | Dean | Smith | 19/05/1972 | 7724413311 |
 	
 
 
@@ -50,6 +50,14 @@ Scenario: Quick Registration
    Then the user is displayed with the following message "Beneficiary created successfully."
    
    
+    Scenario: Send Money  
+    Given user is on the "orm" landing page
+   When user logs in with his credentials "dummy@remitone.com" and "Password1"
+   Then the "Home" page is displayed
+   When user clicks the "Send Money" link
+   Then user selects the beneficairy named \"([^\"]*)\" and clicks next
+   Then user then selects account type \"([^\"]*)\" and clicks next
+   Then user then selects the transfer details \"([^\"]*)\" and clicks next
 
   #  Scenario: ORM Change Language
   # Given user is on the "orm" landing page

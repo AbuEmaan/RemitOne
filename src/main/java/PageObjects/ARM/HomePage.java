@@ -4,21 +4,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import dataProvider.ConfigFileReader;
 import managers.FileReaderManager;
+import TestContext.TestContext;
  
 public class HomePage {
-	WebDriver driver;
+	private WebDriver driver;
+	private TestContext testContext;
 	ConfigFileReader configFileReader;
 	
-	public  HomePage(WebDriver driver) {
+	public  HomePage(WebDriver driver, TestContext context) {
+		PageFactory.initElements(driver,  this);
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		testContext = context;
 		configFileReader= new ConfigFileReader();
 	}
 	
-	//public void perform_Search(String search) {
-		//driver.navigate().to(FileReaderManager.getInstance().getConfigReader().getApplicationUrl() + "/?s=" + search + "&post_type=product");
-	//}
- 
+
 	public void navigateTo_HomePage(String site) {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(site));
 	}

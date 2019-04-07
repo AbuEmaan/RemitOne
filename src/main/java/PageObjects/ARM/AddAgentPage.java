@@ -9,6 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import TestContext.TestContext;
 
 
 
@@ -16,11 +17,13 @@ import org.openqa.selenium.support.ui.Select;
 public class AddAgentPage {
 	
 	private WebDriver wbdriver;
+	private TestContext testContext;
 	// initialise the page elements when the class is instantiated
-	public AddAgentPage(WebDriver driver)
+	public AddAgentPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
 		wbdriver = driver;
+		testContext = context;
 		
 	}
 	

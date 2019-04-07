@@ -1,6 +1,7 @@
 package PageObjects.ARM;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
@@ -12,13 +13,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SetSourceCoversionRatesPage {
 	
-	WebDriver wbDriver;
-	
+	private WebDriver wbDriver;
+	private TestContext testContext;
 	// initialise the page elements when the class is instantiated
-	public SetSourceCoversionRatesPage(WebDriver driver)
+	public SetSourceCoversionRatesPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
-		this.wbDriver= driver;
+		wbDriver = driver;
+		testContext = context;
 	}
 	
 		
