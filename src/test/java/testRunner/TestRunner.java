@@ -50,17 +50,11 @@ public class TestRunner {
 	@BeforeClass
 	public static void SetupExtentReport() throws IOException {
 
-		// webDriverManager = new WebDriverManager();
-		// driver = webDriverManager.getDriver();
-
 		TestRun.setTestRunName();
-
 		testRunName = TestRun.getTestRunName();
 
 		// Create screen shot dir if it does not exist
-
 		String source = System.getProperty("user.dir") + "\\ScreenShots";
-
 		File srcDir = new File(source);
 
 		if (!srcDir.exists())
@@ -75,7 +69,7 @@ public class TestRunner {
 
 		String pathToReport = System.getProperty("user.dir") + "\\" + localTestResultsPath + "\\" + testRunName
 
-				+ "\\RemitOne_" + testRunName + "_report.html";
+				+ "\\" + testRunName + "_report.html";
 
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
 
@@ -102,12 +96,6 @@ public class TestRunner {
 		Reporter.setSystemInfo("Maven", "3.5.2");
 
 		Reporter.setSystemInfo("Java Version", "1.8.0_151");
-
-		// driver.manage().deleteAllCookies();
-		// driver.close();
-		// driver.quit();
-
-		// Source Extent DIR
 
 		String source = System.getProperty("user.dir") + "\\ScreenShots";
 
