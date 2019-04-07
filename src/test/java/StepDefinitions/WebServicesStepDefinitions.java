@@ -2,7 +2,6 @@ package StepDefinitions;
 
 import java.util.List;
 
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import Helpers.HelperFunctions;
-import PageObjects.ARM.LoginPage;
+import Pages.LoginPage;
 import TestContext.TestContext;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
@@ -28,19 +27,17 @@ public class WebServicesStepDefinitions {
 	LoginPage loginPage;
 	TestContext testContext;
 	HelperFunctions helper = new HelperFunctions();
-	
-	
+
 	public WebServicesStepDefinitions(TestContext context) {
 
 		testContext = context;
 		driver = testContext.getWebDriverManager().getDriver();
 	}
 
-	
+	// ********** Step ***********
 	@When("^user click on webservice \"([^\"]*)\"$")
 	public void user_click_on_webservice(String serviceName) throws Throwable {
 
-	
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath("//a[text()='" + serviceName + "']")); // a[text()='searchRemitter']
 		je.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -49,6 +46,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the search Remitter Agent web service$")
 	public void user_validates_the_search_Remitter_Agent_web_service(DataTable remitterDetails) throws Throwable {
 
@@ -86,6 +84,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the create Remitter Agent web service$")
 	public void user_validates_the_create_Remitter_Agent_web_service(DataTable remitterDetails) throws Throwable {
 
@@ -141,6 +140,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the create Beneficiary Agent web service$")
 	public void user_validates_the_create_Beneficiary_Agent_web_service(DataTable beneficiaryDetails) throws Throwable {
 
@@ -198,6 +198,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the create Transaction Agent web service$")
 	public void user_validates_the_create_Transaction_Agent_web_service(DataTable transactionDetails) throws Throwable {
 
@@ -230,6 +231,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the get sell rates web service$")
 	public void user_validates_the_get_sell_rates_web_service(DataTable sellRatesDetails) throws Throwable {
 
@@ -254,8 +256,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
-	
-
+	// ********** Step ***********
 	@Then("^user validates the confirm transaction web service$")
 	public void user_validates_the_confirm_transaction_web_service(DataTable confirmTransactionDetails)
 			throws Throwable {
@@ -280,6 +281,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the get transaction detail web service$")
 	public void user_validates_the_get_transaction_detail_web_service(DataTable TransactionDetails) throws Throwable {
 
@@ -303,6 +305,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the insert transaction detail web service$")
 	public void user_validates_the_insert_transaction_web_service(DataTable TransactionDetails) throws Throwable {
 
@@ -360,6 +363,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the get payout transaction bank web service$")
 	public void user_validates_the_get_payout_transaction_bank_web_service(DataTable payoutBankDetails)
 			throws Throwable {
@@ -383,6 +387,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the accept payout transaction web service$")
 	public void user_validates_the_gaccept_payout_transaction_web_service(DataTable PayoutTransactionDetails)
 			throws Throwable {
@@ -407,6 +412,7 @@ public class WebServicesStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user validates the process payout transaction web service$")
 	public void user_validates_the_process_payout_transaction_web_service(DataTable ProcessPayoutTransactionDetails)
 			throws Throwable {

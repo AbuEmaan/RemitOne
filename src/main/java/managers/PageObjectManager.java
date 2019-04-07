@@ -1,25 +1,26 @@
 package managers;
  
 import org.openqa.selenium.WebDriver;
-import PageObjects.ARM.AddAgentTellerPage;
-import PageObjects.ARM.AddCollectionPointPage;
-import PageObjects.ARM.AddDeliveryBankPage;
-import PageObjects.ARM.AddDestinationCountryPage;
-import PageObjects.ARM.AddProcessingBankPage;
-import PageObjects.ARM.AddRemitterPage;
-import PageObjects.ARM.AddSourceCountryPage;
-import PageObjects.ARM.HomePage;
-import PageObjects.ARM.LoginPage;
-import PageObjects.ARM.PreferencesPage;
-import PageObjects.ARM.SetDestinationConversionRate;
-import PageObjects.ARM.SetSourceCoversionRatesPage;
-import PageObjects.ARM.AddAgentPage;
-import PageObjects.ARM.ORM.QuickRegistrationPage;
-import PageObjects.ARM.ORM.ProfilePage;
-import PageObjects.ARM.ORM.AddBeneficiaryPage;
-import PageObjects.ARM.ORM.SendMoneyProcessPage;
-import PageObjects.ARM.AddDeliveryBankBranchPage;
-import PageObjects.ARM.AddMemberBeneficiaryPage;
+
+import Pages.AddAgentPage;
+import Pages.AddAgentTellerPage;
+import Pages.AddBeneficiaryPage;
+import Pages.AddCollectionPointPage;
+import Pages.AddDeliveryBankBranchPage;
+import Pages.AddDeliveryBankPage;
+import Pages.AddDestinationCountryPage;
+import Pages.AddMemberBeneficiaryPage;
+import Pages.AddProcessingBankPage;
+import Pages.AddRemitterPage;
+import Pages.AddSourceCountryPage;
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.PreferencesPage;
+import Pages.ProfilePage;
+import Pages.QuickRegistrationPage;
+import Pages.SendMoneyProcessPage;
+import Pages.SetDestinationConversionRate;
+import Pages.SetSourceCoversionRatesPage;
 import TestContext.TestContext;
 
 

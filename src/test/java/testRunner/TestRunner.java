@@ -39,7 +39,7 @@ import cucumber.api.junit.Cucumber;
 		monochrome = true,
 //tags = {"@FullRegression"}
 //tags = {"@ARMAdmin"}
-		tags = { "@Test" }
+tags = { "@Test" }
 
 )
 

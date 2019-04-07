@@ -1,4 +1,4 @@
-package PageObjects.ARM;
+package Pages;
 
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.*;

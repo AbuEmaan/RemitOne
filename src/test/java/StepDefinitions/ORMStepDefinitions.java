@@ -8,12 +8,12 @@ import org.openqa.selenium.WebDriver;
 
 import Helpers.HelperFunctions;
 import Helpers.TestRun;
-import PageObjects.ARM.AddDeliveryBankBranchPage;
-import PageObjects.ARM.AddMemberBeneficiaryPage;
-import PageObjects.ARM.ORM.AddBeneficiaryPage;
-import PageObjects.ARM.ORM.ProfilePage;
-import PageObjects.ARM.ORM.QuickRegistrationPage;
-import PageObjects.ARM.ORM.SendMoneyProcessPage;
+import Pages.AddBeneficiaryPage;
+import Pages.AddDeliveryBankBranchPage;
+import Pages.AddMemberBeneficiaryPage;
+import Pages.ProfilePage;
+import Pages.QuickRegistrationPage;
+import Pages.SendMoneyProcessPage;
 import TestContext.TestContext;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
@@ -54,6 +54,7 @@ public class ORMStepDefinitions {
 		
 	}
 
+	// ********** Step ***********
 	@When("^user completes the registration form and submits$")
 	public void user_completes_the_registration_form_on_the_ORM_site(DataTable registrationDetails) throws Throwable {
 
@@ -62,6 +63,7 @@ public class ORMStepDefinitions {
 				data.get(0).get(3), data.get(0).get(4), data.get(0).get(5), data.get(0).get(6));
 	}
 
+	// ********** Step ***********
 	@When("^the user clicks the logout link$")
 	public void the_user_clicks_the_logout_link() throws Throwable {
 
@@ -73,12 +75,14 @@ public class ORMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^The logout message is displayed$")
 	public void the_logout_message_is_displayed() throws Throwable {
 
 		System.out.println("logout message tb done");
 	}
 
+	// ********** Step ***********
 	@Then("^user logs in with his credentials \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_logs_in_with_his_credentials(String username, String password) throws Throwable {
 
@@ -88,12 +92,14 @@ public class ORMStepDefinitions {
 		driver.findElement(By.id("login-button")).click();
 	}
 
+	// ********** Step ***********
 	@Then("^the user is displayed a welcome message$")
 	public void the_user_is_displayed_a_welcome_message() throws Throwable {
 
 		System.out.println("login message tb done");
 	}
 
+	// ********** Step ***********
 	@When("^user clicks on the my profile link$")
 	public void user_clicks_on_the_my_profile_link() throws Throwable {
 
@@ -104,6 +110,7 @@ public class ORMStepDefinitions {
 		driver.findElement(By.xpath("//*[@class='icon-user']")).click();
 	}
 
+	// ********** Step ***********
 	@When("^users edits the profile$")
 	public void users_edits_the_profile(DataTable profileDetails) throws Throwable {
 
@@ -114,6 +121,7 @@ public class ORMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@When("^user adds beneficiary$")
 	public void user_adds_beneficiary(DataTable beneficiaryDetails) throws Throwable {
 		List<List<String>> data = beneficiaryDetails.raw();
@@ -125,6 +133,7 @@ public class ORMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@When("^user changes language to \"([^\"]*)\"$")
 	public void user_changes_language_to(String language) throws Throwable {
 
@@ -137,6 +146,7 @@ public class ORMStepDefinitions {
 		// driver.findElement(By.xpath("//a[text()='"+language+"']")).click();
 	}
 
+	// ********** Step ***********
 	@Then("^language changed message is displayed$")
 	public void language_changed_message_is_displayed() throws Throwable {
 
@@ -144,12 +154,14 @@ public class ORMStepDefinitions {
 		// driver.findElement(By.xpath("//span[@class='Enlish']")).click();
 	}
 
+	// ********** Step ***********
 	@When("^user clicks the \"([^\"]*)\" link$")
 	public void user_clicks_the_link(String link) throws Throwable {
 
 		driver.findElement(By.linkText(link)).click();
 	}
 
+	// ********** Step ***********
 	@Then("^the user is displayed with the following message \"([^\"]*)\"$")
 	public void the_user_is_displayed_with_the_following_message(String messageDisplayed) throws Throwable {
 
@@ -161,16 +173,19 @@ public class ORMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user selects the beneficairy named \"([^\"]*)\" and clicks next$")
 	public void user_selects_the_beneficairy_named_and_clicks_next(String beneficiaryName) throws Throwable {
 		sendMoneyProcessPage.selectBeneficiary(beneficiaryName);
 	}
 
+	// ********** Step ***********
 	@Then("^user then selects account type \"([^\"]*)\" and clicks next$")
 	public void user_then_selects_account_type_and_clicks_next(String transferType) throws Throwable {
 		sendMoneyProcessPage.selectAccountType(transferType);
 	}
 
+	// ********** Step ***********
 	@Then("^user then selects the transfer details \"([^\"]*)\" and clicks next$")
 	public void user_then_selects_the_transfer_details_and_clicks_next(String state) throws Throwable {
 		sendMoneyProcessPage.selectTransferDetails(state);

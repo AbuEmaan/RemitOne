@@ -1,4 +1,4 @@
-package PageObjects.ARM;
+package Pages;
 
 import org.openqa.selenium.chrome.*;
 import TestContext.TestContext;
@@ -12,16 +12,19 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class AddDeliveryBankBranchPage {
+
+
+public class AddDeliveryBankPage {
 	
-	private WebDriver wbdriver;
+	
+	private WebDriver wbDriver;
 	private TestContext testContext;
 	
 	// initialise the page elements when the class is instantiated
-	public AddDeliveryBankBranchPage(WebDriver driver, TestContext context)
+	public AddDeliveryBankPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
-		wbdriver = driver;
+		wbDriver = driver;
 		testContext = context;
 	}
 	
@@ -32,22 +35,29 @@ public class AddDeliveryBankBranchPage {
 	@FindBy(how = How.ID, using = "menu-settings-deliveryEntities")
 	public WebElement linkDeliveryEntities;
 
-	@FindBy(how = How.ID, using = "menu-settings-deliveryEntities-bankBranches")
+	@FindBy(how = How.ID, using = "menu-settings-deliveryEntities-banks")
 	public WebElement linkDeliveryBank;
 	
-	@FindBy(how = How.XPATH, using = "//span[text()='Add New Branch']")
+	@FindBy(how = How.XPATH, using = "//span[text()='Add New Delivery Bank']")
 	public WebElement linkAddDeliveryBank;
 	
-	@FindBy(how = How.NAME, using = "branch:branch_code")
+	@FindBy(how = How.NAME, using = "bank:bank_code")
 	public WebElement inputBankCode;
 	
-	@FindBy(how = How.NAME, using = "branch:name")
+	@FindBy(how = How.NAME, using = "bank:name")
 	public WebElement inputBankName;
-			
-	@FindBy(how = How.NAME, using = "branch:city")
+	
+	@FindBy(how = How.NAME, using = "bank:address")
+	public WebElement inputBankaddress;
+	
+	@FindBy(how = How.NAME, using = "country_id")
+	public WebElement ddcountry;
+	
+	
+	@FindBy(how = How.NAME, using = "bank:city")
 	public WebElement inputBankCity;
 	
-	@FindBy(how = How.NAME, using = "branch:state")
+	@FindBy(how = How.NAME, using = "bank:state")
 	public WebElement inputBankState;
 	
 	@FindBy(how = How.NAME, using = "submit")
@@ -57,7 +67,7 @@ public class AddDeliveryBankBranchPage {
 	public WebElement textSuccessMsg;
 	
 	
-	public void setDeliveryBankBranch( String branchName, String branchCode, String deliveryBankName, String branchCity, String branchState) throws InterruptedException
+	public void setDeliveryBank( String bankName, String bankCode, String bankCountry, String bankCity, String bankState ) throws InterruptedException
 	{
 		
 		linkSettings.click();
@@ -65,28 +75,38 @@ public class AddDeliveryBankBranchPage {
 		linkDeliveryBank.click();
 		linkAddDeliveryBank.click();
 
-		inputBankName.sendKeys(branchName);
-		inputBankCode.sendKeys(branchCode);
-		inputBankState.sendKeys(branchCity);
-		inputBankCity.sendKeys(branchState);
+		inputBankName.sendKeys(bankName);
+		inputBankCode.sendKeys(bankCode);
+		//inputBankaddress.sendKeys(bankAddress);
+		inputBankState.sendKeys(bankCity);
+		inputBankCity.sendKeys(bankState);
 		
-		selectValueFromDropDown("delivery_bank", deliveryBankName);
-			
+		
+		
+		selectValueFromDropDown("country_id", bankCountry);
+		
+		
 		btnSubmit.click();
 		
 		if(!textSuccessMsg.getText().contains("added successfully"))
 		{
 			
-			Assert.fail("deliver bank branch was not added successfully");
+			Assert.fail("deliver bank was not added successfully");
+			
+			
+			//Assert.fail("dfre");
 			
 		}
+		
+	
 		
 	}
 	
 	public void selectValueFromDropDown(String id, String valueToSelect)
 	{
 		
-		List<WebElement> options = this.wbdriver.findElements(By.xpath("//select[@id ='"+id+"']/option"));
+		
+		List<WebElement> options = this.wbDriver.findElements(By.xpath("//select[@id ='"+id+"']/option"));
 
 		for (WebElement option : options) {
 			System.out.println(option.getText());
@@ -101,4 +121,3 @@ public class AddDeliveryBankBranchPage {
 
 
 	
-

@@ -16,16 +16,13 @@ import com.cucumber.listener.ExtentProperties;
 
 public class CommonStepDefinitions {
 	WebDriver driver;
-
 	WebDriverManager webDriverManager;
-
 	TestContext testContext;
 	enums.TestData TestData;
-
 	TestRun reporter;
-
 	private HelperFunctions helper = new HelperFunctions();
 
+	
 	public CommonStepDefinitions(TestContext context) {
 
 		testContext = context;
@@ -37,15 +34,12 @@ public class CommonStepDefinitions {
 	public void setup() {
 
 		System.out.println("===========================================================================");
-
 		System.out.println("============================== TEST STARTED  ===============================");
-
 		System.out.println("===========================================================================");
-
 		System.out.println("===========================================================================");
-
 		System.out.println("==== DIR : " + System.getProperty("user.dir"));
-		testContext.scenarioContext.setContext(TestData.TestName, "First Test");
+		
+		//testContext.scenarioContext.setContext(TestData.TestName, "First Test");
 
 	}
 
@@ -54,14 +48,9 @@ public class CommonStepDefinitions {
 
 		String testRunName = TestRun.getTestRunName();
 
-		// write test data
-
 		System.out.println("===========================================================================");
-
 		System.out.println("========================= TEST FINISHED STATUS ============================");
-
 		System.out.println("===========================================================================");
-
 		System.out.println("==== TEST RUN: " + testRunName);
 		System.out.println("=== Test Run data: " + testContext.scenarioContext.getContext(TestData.TestName));
 

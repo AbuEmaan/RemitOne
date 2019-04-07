@@ -1,2 +1,0 @@
-# RemitOne
-RemitOne Automation Suite

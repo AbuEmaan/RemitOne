@@ -5,17 +5,17 @@ Feature: ARM Admin
     Given user is on the "arm" landing page
     When user enters "admin" and "remitone"
     Then the "Preferences" page is displayed
-    When user changes password by entering the old password "remitone" and the new password "Password1" and confirmed new password "Password1" and clicks continue
+    When user changes password by entering the old password "remitone" and the new password "Password2" and confirmed new password "Password1" and clicks continue
     Then the user is displayed with the following message "User Profile updated successfully"
 
-  #Scenario: Admin Preferences - Change Password
-   # Given user is on the "arm" landing page
-   # When user enters "admin" and "remitone"
-    #Then the "Current rate to Bangladesh" page is displayed
-    #When the User clicks the "Preferences" link
-    #Then the "Preferences" page is displayed
-    #When user changes password by entering the old password "remitone" and the new password "remitone" and confirmed new password "remitone" and clicks continue
-    #Then the "RemitOne Transfer" page is displayed
+  Scenario: Admin Preferences - Change Password
+    Given user is on the "arm" landing page
+    When user enters "admin" and "Password2"
+    Then the "Current rate to Bangladesh" page is displayed
+    When the User clicks the "Preferences" link
+    Then the "Preferences" page is displayed
+    When user changes password by entering the old password "Password2" and the new password "Password1" and confirmed new password "Password1" and clicks continue
+    Then the "RemitOne Transfer" page is displayed
 
   Scenario: Add Source Country
     Given user is on the "arm" landing page
@@ -88,24 +88,43 @@ Feature: ARM Admin
 
     Examples: 
       | firstName  | LastName | username           | password  | fullBankName    | bankName | bankCode | bankAddress      | town  | bankCountry | email                       | bankSuperID         |
-      | City       | bank     | citybankBangladesh | Password1 | City Bank       | CB       |      001 | 45 closed city   | Dhaka | Bangladesh  | abayomi.alonge@remitone.com | Overview Super Bank |
-      | Commercial | bank     | commercialbank     | Password1 | Commercial Bank | COMB     |      002 | 45 Charlton Road | Dhaka | Bangladesh  | abayomi.alonge@remitone.com |                     |
+      | City       | bank     | citybankBangladesh | Password2 | City Bank       | CB       |      001 | 45 closed city   | Dhaka | Bangladesh  | abayomi.alonge@remitone.com | Overview Super Bank |
+      | Commercial | bank     | commercialbank     | Password2 | Commercial Bank | COMB     |      002 | 45 Charlton Road | Dhaka | Bangladesh  | abayomi.alonge@remitone.com |                     |
+
+  Scenario: First Processing bank (citybankBangladesh) login and Password Change
+    Given user is on the "arm" landing page
+    When user enters "citybankBangladesh" and "Password2"
+    Then the "Preferences" page is displayed
+    When user changes password by entering the old password "Password2" and the new password "Password1" and confirmed new password "Password1" and clicks continue
+    Then the user is displayed with the following message "User Profile updated successfully"
+
+  Scenario: First Processing bank (commercialbank) login and Password Change
+    Given user is on the "arm" landing page
+    When user enters "commercialbank" and "Password2"
+    Then the "Preferences" page is displayed
+    When user changes password by entering the old password "Password2" and the new password "Password1" and confirmed new password "Password1" and clicks continue
+    Then the user is displayed with the following message "User Profile updated successfully"
 
   Scenario: Add an  Agent
     Given user is on the "arm" landing page
     When user enters "admin" and "Password1"
     Then the "Current rate to Bangladesh" page is displayed
     Then user adds an agent
-      | Boss Express | Brown | Bobby | brownagent | Password1 | United Kingdom | 45 Best town | London | Address21111 | 28000 | abayomi.alonge@remitone.com | 35256236262 | 42 | Yomi | Yomi | Yomi |
+      | Boss Express | Brown | Bobby | brownagent | Password2 | United Kingdom | 45 Best town | London | Address21111 | 28000 | abayomi.alonge@remitone.com | 35256236262 | 42 | Yomi | Yomi | Yomi |
 
+  Scenario: First Agent Valid login and Password Change
+    Given user is on the "arm" landing page
+    When user enters "brownagent" and "Password2"
+    Then the "Preferences" page is displayed
+    When user changes password by entering the old password "Password2" and the new password "Password1" and confirmed new password "Password1" and clicks continue
+    Then the user is displayed with the following message "User Profile updated successfully"
 
-Scenario: Add a member beneficiary
+  Scenario: Add a member beneficiary
     Given user is on the "arm" landing page
     When user enters "admin" and "Password1"
     Then the "Current rate to Bangladesh" page is displayed
     Then user adds a member beneficiary
-      |SADI|MANNAN|ALLEN STREET|BENGAZI|Dhaka|abayomi.alonge@remitone.com|10000|label=PASSPORT|595493359590|263456|07628664252|12345678911|TW9|Dhaka|04359392828278|Dhaka|Janata Bank|National Bank|Janata Bank|43682472471371|594848338|764796963479634|
-
+      | SADI | MANNAN | ALLEN STREET | BENGAZI | Dhaka | abayomi.alonge@remitone.com | 10000 | label=PASSPORT | 595493359590 | 263456 | 07628664252 | 12345678911 | TW9 | Dhaka | 04359392828278 | Dhaka | Janata Bank | National Bank | Janata Bank | 43682472471371 | 594848338 | 764796963479634 |
 
   Scenario: set agent credit
     Given user is on the "arm" landing page

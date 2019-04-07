@@ -1,64 +1,44 @@
 package StepDefinitions;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
-import org.junit.Assert;
 
-import java.util.Properties;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-import com.cucumber.listener.ExtentProperties;
-import com.cucumber.listener.Reporter;
 import Helpers.HelperFunctions;
-import Helpers.TestRun;
-import managers.FileReaderManager;
-import managers.WebDriverManager;
+import Pages.AddAgentPage;
+import Pages.AddAgentTellerPage;
+import Pages.AddBeneficiaryPage;
+import Pages.AddCollectionPointPage;
+import Pages.AddDeliveryBankBranchPage;
+import Pages.AddDeliveryBankPage;
+import Pages.AddDestinationCountryPage;
+import Pages.AddMemberBeneficiaryPage;
+import Pages.AddProcessingBankPage;
+import Pages.AddRemitterPage;
+import Pages.AddSourceCountryPage;
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.PreferencesPage;
+import Pages.ProfilePage;
+import Pages.QuickRegistrationPage;
+import Pages.SendMoneyProcessPage;
+import Pages.SetDestinationConversionRate;
+import Pages.SetSourceCoversionRatesPage;
+import TestContext.TestContext;
 import cucumber.api.DataTable;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import dataProvider.ConfigFileReader;
 import enums.TestData;
 import managers.PageObjectManager;
-import PageObjects.ARM.AddAgentTellerPage;
-import PageObjects.ARM.AddCollectionPointPage;
-import PageObjects.ARM.AddDeliveryBankPage;
-import PageObjects.ARM.AddDeliveryBankBranchPage;
-import PageObjects.ARM.AddDestinationCountryPage;
-import PageObjects.ARM.AddProcessingBankPage;
-import PageObjects.ARM.AddRemitterPage;
-import PageObjects.ARM.AddSourceCountryPage;
-import PageObjects.ARM.HomePage;
-import PageObjects.ARM.LoginPage;
-import PageObjects.ARM.PreferencesPage;
-import PageObjects.ARM.AddAgentPage;
-import PageObjects.ARM.SetDestinationConversionRate;
-import PageObjects.ARM.SetSourceCoversionRatesPage;
-import PageObjects.ARM.ORM.QuickRegistrationPage;
-import PageObjects.ARM.ORM.ProfilePage;
-import PageObjects.ARM.ORM.AddBeneficiaryPage;
-import PageObjects.ARM.ORM.SendMoneyProcessPage;
-import TestContext.TestContext;
-import PageObjects.ARM.AddMemberBeneficiaryPage;
+import managers.WebDriverManager;
 
 public class ARMStepDefinitions {
 	WebDriver driver;
-	
 	LoginPage loginPage;
 	AddSourceCountryPage addSourceCountryPage;
 	HomePage homePage;
@@ -84,7 +64,6 @@ public class ARMStepDefinitions {
 	TestContext testContext;
 
 	HelperFunctions helper = new HelperFunctions();
-	
 
 	public ARMStepDefinitions(TestContext context) {
 
@@ -110,11 +89,12 @@ public class ARMStepDefinitions {
 		addDeliveryBankBranchPage = testContext.getPageObjectManager().getAddDeliveryBankBranchPage(context);
 		addMemberBeneficiaryPage = testContext.getPageObjectManager().getAddMemberBeneficiaryPage(context);
 	}
-	
+
+	// ********** Step ***********
 
 	@Given("^user is on the \"([^\"]*)\" landing page$")
 	public void user_is_on_the_landing_page(String site) throws Throwable {
-	
+
 		homePage.navigateTo_HomePage(site);
 
 		// close the cookie button
@@ -122,19 +102,22 @@ public class ARMStepDefinitions {
 			driver.findElement(By.linkText("Close")).click();
 	}
 
+	// ********** Step ***********
 	@When("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_enters_and(String username, String password) throws Throwable {
-	
+
 		loginPage.loginadmin(username, password);
 
 	}
 
+	// ********** Step ***********
 	@Then("^user clicks the logout link$")
 	public void user_clicks_the_logout_link() throws Throwable {
 
 		loginPage.logout();
 	}
 
+	// ********** Step ***********
 	@Then("^the \"([^\"]*)\" page is displayed$")
 	public void the_page_is_displayed(String pageHeader) throws Throwable {
 
@@ -142,19 +125,22 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@When("^the User clicks the \"([^\"]*)\" link$")
 	public void the_User_clicks_the_link(String navigationLink) throws Throwable {
 
 		driver.findElement(By.xpath("//a[contains(text(), '" + navigationLink + "')]")).click();
 	}
 
+	// ********** Step ***********
 	@When("^user changes password by entering the old password \"([^\"]*)\" and the new password \"([^\"]*)\" and confirmed new password \"([^\"]*)\" and clicks continue$")
 	public void user_changes_password(String oldPWD, String newPWD, String confirmedPWD) throws Throwable {
-		
+
 		preferencesPage.changePassword(oldPWD, newPWD, confirmedPWD);
 
 	}
 
+	// ********** Step ***********
 	@Then("^the user adds the source country as \"([^\"]*)\" and currency as \"([^\"]*)\" and WalletEnabled is set to \"([^\"]*)\"$")
 	public void the_user_adds_the_source_country_as_and_currency_as_and_WalletEnabled_is_set_to(String country,
 			String currency, String walletEnabled) throws Throwable {
@@ -162,12 +148,14 @@ public class ARMStepDefinitions {
 		addSourceCountryPage.setSourceCountry(country, currency, walletEnabled);
 	}
 
+	// ********** Step ***********
 	@Then("^the user adds the destination country as \"([^\"]*)\"$")
 	public void the_user_adds_the_destination_country_as(String country) throws Throwable {
-	
+
 		addDestinationCountryPage.setDestinationCountry(country);
 	}
 
+	// ********** Step ***********
 	@Then("^the user adds source destination rates for euro \"([^\"]*)\" and usd \"([^\"]*)\"$")
 	public void the_user_adds_source_destination_rates_for_euro_and_usd(String euroRate, String usdRate)
 			throws Throwable {
@@ -175,13 +163,15 @@ public class ARMStepDefinitions {
 		setSourceCoversionRatesPage.setSourceConversionRates(euroRate, usdRate);
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a deliver bank \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_adds_a_deliver_bank(String name, String code, String address, String city, String state)
 			throws Throwable {
-	
+
 		addDeliveryBankPage.setDeliveryBank(name, code, address, city, state);
 	}
 
+	// ********** Step ***********
 	@Then("^the user adds additional currency \"([^\"]*)\" for the  country \"([^\"]*)\"$")
 	public void the_user_adds_additional_currency_for_the_country(String currencyCountry, String country)
 			throws Throwable {
@@ -201,6 +191,7 @@ public class ARMStepDefinitions {
 		driver.switchTo().alert().accept();
 	}
 
+	// ********** Step ***********
 	@Then("^the user sets buy rate one \"([^\"]*)\" and buy rate two \"([^\"]*)\"$")
 	public void the_user_sets_buy_rate_one_and_buy_rate_two(String rate1, String rate2) throws Throwable {
 		driver.findElement(By.id("menu-procBanks")).click();
@@ -224,6 +215,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^the user sets commission slabs \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void the_user_sets_commission_slabs(String amount, String commFixed, String commPerc, String slabIndex)
 			throws Throwable {
@@ -248,6 +240,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^link agent to teller first name is  \"([^\"]*)\"  and last name \"([^\"]*)\" and username \"([^\"]*)\" and password is \"([^\"]*)\"$")
 	public void link_agent_to_teller(String fname, String lname, String username, String password) throws Throwable {
 
@@ -272,6 +265,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^add agent credit \"([^\"]*)\"$")
 	public void add_agent_credit(String deposit) throws Throwable {
 
@@ -293,6 +287,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user adds sell rates \"([^\"]*)\" and \"([^\"]*)\" for \"([^\"]*)\"$")
 	public void user_adds_sell_rates_and_for(String hqAgentAmount, String nonHQAgentAmount, String slabIndex)
 			throws Throwable {
@@ -344,6 +339,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^add bank credit \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void add_bank_credit_and(String bankName, String deposit) throws Throwable {
 
@@ -365,6 +361,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^the user sets compliance limits$")
 	public void the_user_sets_compliance_limits() throws Throwable {
 		driver.findElement(By.id("menu-settings")).click();
@@ -393,6 +390,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a deliver bank branch  \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_adds_a_deliver_bank_branch(String name, String code, String deliveryBank, String city,
 			String state) throws Throwable {
@@ -400,6 +398,7 @@ public class ARMStepDefinitions {
 		addDeliveryBankBranchPage.setDeliveryBankBranch(name, code, deliveryBank, city, state);
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a collection point \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_adds_a_collection_point(String CPName, String CPBankName, String CPCode, String CPAddress,
 			String CPCity, String CPState) throws Throwable {
@@ -407,6 +406,7 @@ public class ARMStepDefinitions {
 		addCollectionPointPage.setCollectionPoint(CPName, CPBankName, CPCode, CPAddress, CPCity, CPState);
 	}
 
+	// ********** Step ***********
 	@Then("^the user adds  destination rates \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void the_user_adds_destination_conversion_rates(String firstRate, String secRate, String thirdRate)
 			throws Throwable {
@@ -414,6 +414,7 @@ public class ARMStepDefinitions {
 		setDestinationConversionRate.setDestinationConversionRates(firstRate, secRate, thirdRate);
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a processing  bank \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_adds_a_processing_bank(String firstName, String lastName, String userName, String password,
 			String fullBankName, String bankName, String bankCode, String bankAddress, String town, String bankCountry,
@@ -423,6 +424,7 @@ public class ARMStepDefinitions {
 				bankCode, bankAddress, town, bankCountry, email, bankSuperID);
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a teller agent \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_add_teller_agent(String firstName, String lastName, String email, String userName, String password)
 			throws Throwable {
@@ -430,6 +432,7 @@ public class ARMStepDefinitions {
 		addAgentTellerPage.addTellerAgent(firstName, lastName, email, userName, password);
 	}
 
+	// ********** Step ***********
 	@Then("^user adds an agent$")
 	public void user_adds_an_agent(DataTable agentDetails) throws Throwable {
 
@@ -442,6 +445,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a remitter$")
 	public void user_adds_a_remitter(DataTable remitterDetails) throws Throwable {
 
@@ -454,6 +458,7 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	@Then("^user adds a member beneficiary$")
 	public void user_adds_a_member_beneficiary(DataTable remitterDetails) throws Throwable {
 
@@ -467,8 +472,8 @@ public class ARMStepDefinitions {
 
 	}
 
+	// ********** Step ***********
 	// WS user setup
-
 	@Then("^set webservice user \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void set_webservice_user_and_and(String wsusername, String wspassword, String wsassociateduser)
 			throws Throwable {
@@ -500,7 +505,7 @@ public class ARMStepDefinitions {
 
 	}
 
-	
+	// ********** Step ***********
 	@When("^user  the create a money \"([^\"]*)\" by \"([^\"]*)\" for  \"([^\"]*)\" for the \"([^\"]*)\"$")
 	public void user_the_create_a_money_by_for_for_the(String transferType, String remitter, String beneficiary,
 			String amount) throws Throwable {
@@ -541,12 +546,12 @@ public class ARMStepDefinitions {
 		helper.addfullScreenCaptureToExtentReport(driver);
 		driver.findElement(By.id("Submit")).click();
 		helper.addfullScreenCaptureToExtentReport(driver);
-		
+
 		helper.scrollDown("400", driver);
 		helper.waitForElementToBecomeVisible(driver, By.id("compliance_confirmation"));
-		
+
 		driver.findElement(By.id("compliance_confirmation")).click();
-		
+
 		driver.findElement(By.id("Create")).click();
 
 		for (String winHandle : driver.getWindowHandles()) {
@@ -577,5 +582,4 @@ public class ARMStepDefinitions {
 
 	}
 
-	
 }

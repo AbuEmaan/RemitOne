@@ -1,4 +1,4 @@
-package PageObjects.ARM.ORM;
+package Pages;
 
 import org.openqa.selenium.chrome.*;
 import TestContext.TestContext;

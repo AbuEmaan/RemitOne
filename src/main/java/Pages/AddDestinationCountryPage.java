@@ -1,30 +1,40 @@
-package PageObjects.ARM;
+package Pages;
 
 import org.openqa.selenium.chrome.*;
+import TestContext.TestContext;
+
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import TestContext.TestContext;
+import Helpers.HelperFunctions;
 
 
 
 
-public class AddSourceCountryPage {
+public class AddDestinationCountryPage {
+	
 	
 	private WebDriver wbdriver;
 	private TestContext testContext;
-	
+	HelperFunctions helper = new HelperFunctions();
 	// initialise the page elements when the class is instantiated
-	public AddSourceCountryPage(WebDriver driver, TestContext context)
+	public AddDestinationCountryPage(WebDriver driver, TestContext context)
 	{
 		PageFactory.initElements(driver,  this);
-		wbdriver = driver;
 		testContext = context;
+		wbdriver = driver;
+		
+		
 	}
 	
+	
+
+
 		
 	@FindBy(how = How.ID, using = "menu-settings")
 	public WebElement linkSettings;
@@ -32,20 +42,14 @@ public class AddSourceCountryPage {
 	@FindBy(how = How.ID, using = "menu-settings-countriesCurrencies")
 	public WebElement linkCountriesandcurrencies;
 
-	@FindBy(how = How.ID, using = "menu-settings-countriesCurrencies-sourceCountries")
+	@FindBy(how = How.ID, using = "menu-settings-countriesCurrencies-destinationCountries")
 	public WebElement linkSourceCountry;
 	
-	@FindBy(how = How.XPATH, using = "//a[text()='New Source Country']")
+	@FindBy(how = How.XPATH, using = "//a[text()='New Destination Country']")
 	public WebElement linkAddCountry;
 	
 	@FindBy(how = How.ID, using = "country_selector")
 	public WebElement ddCountrySelector;
-	
-	@FindBy(how = How.ID, using = "currency_select")
-	public WebElement ddCurrencySelector;
-	
-	@FindBy(how = How.ID, using = "wallet_transfer_enabled")
-	public WebElement ddWalletEnabledSelector;
 	
 	@FindBy(how = How.XPATH, using = "//input[@class='input-button']")
 	public WebElement btnSubmit;
@@ -54,7 +58,7 @@ public class AddSourceCountryPage {
 	public WebElement textSuccessMsg;
 	
 	
-	public void setSourceCountry(String country, String currency, String walletEnabled) throws InterruptedException
+	public void setDestinationCountry(String country) throws InterruptedException
 	{
 		
 		linkSettings.click();
@@ -62,35 +66,34 @@ public class AddSourceCountryPage {
 		linkSourceCountry.click();
 		
 		linkAddCountry.click();
-		
-		
-		Select ddCountry = new Select(ddCountrySelector);
-		ddCountry.selectByVisibleText(country);
-		
-		Select ddCurrency= new Select(ddCurrencySelector);
-		ddCurrency.selectByVisibleText(currency);
-		
-		
-		Select ddwalletEnabled= new Select(ddWalletEnabledSelector);
-		ddwalletEnabled.selectByVisibleText(walletEnabled);
-		
-		
+				
+		// set the country
+		helper.selectValueFromDropDown("country_selector", country,wbdriver);
+	
 		
 		btnSubmit.click();
 		
-		if(!textSuccessMsg.getText().contains("added successfully"))
+		Thread.sleep(2000);
+		
+		System.out.println(textSuccessMsg.getText());
+		
+		if(!textSuccessMsg.getText().toLowerCase().contains("added successfully."))
 		{
 			
-			Assert.fail("Source Country was not added successfully");
+			Assert.fail("Destination Country was not added successfully");
 			
 			
-			//Assert.fail("dfre");
 			
 		}
 		
 	
 		
 	}
+	
+	
+	
+	
+	
 	
 }
 

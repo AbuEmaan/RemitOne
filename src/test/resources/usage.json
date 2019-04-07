@@ -5,12 +5,16 @@
       {
         "name": "user enters \"brownagent\" and \"Password2\"",
         "aggregatedDurations": {
-          "average": 9.185818341,
-          "median": 9.185818341
+          "average": 4.132447365,
+          "median": 4.132447365
         },
         "durations": [
           {
-            "duration": 9.185818341,
+            "duration": 4.796118087,
+            "location": "Test.feature:6"
+          },
+          {
+            "duration": 3.468776644,
             "location": "Test.feature:6"
           }
         ]
@@ -23,16 +27,16 @@
       {
         "name": "user is on the \"arm\" landing page",
         "aggregatedDurations": {
-          "average": 5.084786447,
-          "median": 5.084786447
+          "average": 3.306929245,
+          "median": 3.306929245
         },
         "durations": [
           {
-            "duration": 6.338321559,
+            "duration": 4.087936856,
             "location": "Test.feature:5"
           },
           {
-            "duration": 3.831251336,
+            "duration": 2.525921634,
             "location": "Test.feature:5"
           }
         ]
@@ -45,12 +49,16 @@
       {
         "name": "the \"Current rate to Bangladesh\" page is displayed",
         "aggregatedDurations": {
-          "average": 0.616946986,
-          "median": 0.616946986
+          "average": 0.141363598,
+          "median": 0.141363598
         },
         "durations": [
           {
-            "duration": 0.616946986,
+            "duration": 0.136947308,
+            "location": "Test.feature:7"
+          },
+          {
+            "duration": 0.145779889,
             "location": "Test.feature:7"
           }
         ]
