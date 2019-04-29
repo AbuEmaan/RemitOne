@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 10787693367,
+              "duration": 10092421439,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 12,
-        "name": "Add a member beneficiary",
+        "line": 4,
+        "name": "First Admin Valid login and Password Change",
         "description": "",
-        "id": "test;add-a-member-beneficiary;;2",
+        "id": "arm-admin;first-admin-valid-login-and-password-change",
         "after": [
           {
             "result": {
-              "duration": 4088686885,
+              "duration": 2569652576,
               "status": "passed"
             },
             "match": {
@@ -30,11 +30,11 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3564607479,
+              "duration": 3396761025,
               "status": "passed"
             },
             "line": 5,
@@ -52,20 +52,20 @@
           },
           {
             "result": {
-              "duration": 3918420202,
+              "duration": 5406280779,
               "status": "passed"
             },
             "line": 6,
-            "name": "user enters \"brownagent\" and \"Password2\"",
+            "name": "user enters \"admin\" and \"remitone\"",
             "match": {
               "arguments": [
                 {
-                  "val": "brownagent",
+                  "val": "admin",
                   "offset": 13
                 },
                 {
-                  "val": "Password2",
-                  "offset": 30
+                  "val": "remitone",
+                  "offset": 25
                 }
               ],
               "location": "ARMStepDefinitions.user_enters_and(String,String)"
@@ -74,15 +74,15 @@
           },
           {
             "result": {
-              "duration": 123393840,
+              "duration": 96298246,
               "status": "passed"
             },
             "line": 7,
-            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "name": "the \"Preferences\" page is displayed",
             "match": {
               "arguments": [
                 {
-                  "val": "Current rate to Bangladesh",
+                  "val": "Preferences",
                   "offset": 5
                 }
               ],
@@ -92,46 +92,47 @@
           },
           {
             "result": {
-              "duration": 43986084513,
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: compliance_confirmation (tried for 15 second(s) with 500 milliseconds interval)\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)\r\n\tat Helpers.HelperFunctions.waitForElementToBecomeVisible(HelperFunctions.java:154)\r\n\tat StepDefinitions.ARMStepDefinitions.user_the_create_a_money_by_for_for_the(ARMStepDefinitions.java:551)\r\n\tat ✽.When user  the create a money \"Cash Collection\" by \"Maria\" for  \"Sadi\" for the \"90\"(Test.feature:8)\r\nCaused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: compliance_confirmation\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.13.0\u0027, revision: \u00272f0d292\u0027, time: \u00272018-06-25T15:24:21.231Z\u0027\nSystem info: host: \u0027SAFEEYAH\u0027, ip: \u0027192.168.0.36\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)\r\n\tat java.util.Optional.orElseThrow(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)\r\n\tat Helpers.HelperFunctions.waitForElementToBecomeVisible(HelperFunctions.java:154)\r\n\tat StepDefinitions.ARMStepDefinitions.user_the_create_a_money_by_for_for_the(ARMStepDefinitions.java:551)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\r\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
-              "status": "failed"
+              "duration": 4260346819,
+              "status": "passed"
             },
             "line": 8,
-            "name": "user  the create a money \"Cash Collection\" by \"Maria\" for  \"Sadi\" for the \"90\"",
+            "name": "user changes password by entering the old password \"remitone\" and the new password \"Password2\" and confirmed new password \"Password2\" and clicks continue",
             "match": {
               "arguments": [
                 {
-                  "val": "Cash Collection",
-                  "offset": 26
+                  "val": "remitone",
+                  "offset": 52
                 },
                 {
-                  "val": "Maria",
-                  "offset": 47
+                  "val": "Password2",
+                  "offset": 84
                 },
                 {
-                  "val": "Sadi",
-                  "offset": 60
-                },
-                {
-                  "val": "90",
-                  "offset": 75
+                  "val": "Password2",
+                  "offset": 123
                 }
               ],
-              "location": "ARMStepDefinitions.user_the_create_a_money_by_for_for_the(String,String,String,String)"
+              "location": "ARMStepDefinitions.user_changes_password(String,String,String)"
             },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3
-            ],
             "keyword": "When "
-          }
-        ],
-        "tags": [
+          },
           {
-            "line": 1,
-            "name": "@Test"
+            "result": {
+              "duration": 88691612,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user is displayed with the following message \"User Profile updated successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User Profile updated successfully",
+                  "offset": 50
+                }
+              ],
+              "location": "ORMStepDefinitions.the_user_is_displayed_with_the_following_message(String)"
+            },
+            "keyword": "Then "
           }
         ]
       },
@@ -139,7 +140,7 @@
         "before": [
           {
             "result": {
-              "duration": 4320607245,
+              "duration": 4556249397,
               "status": "passed"
             },
             "match": {
@@ -147,14 +148,14 @@
             }
           }
         ],
-        "line": 13,
-        "name": "Add a member beneficiary",
+        "line": 11,
+        "name": "Admin Preferences - Change Password",
         "description": "",
-        "id": "test;add-a-member-beneficiary;;3",
+        "id": "arm-admin;admin-preferences---change-password",
         "after": [
           {
             "result": {
-              "duration": 3936908176,
+              "duration": 2128584973,
               "status": "passed"
             },
             "match": {
@@ -163,14 +164,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2835376263,
+              "duration": 3039787023,
               "status": "passed"
             },
-            "line": 5,
+            "line": 12,
             "name": "user is on the \"arm\" landing page",
             "match": {
               "arguments": [
@@ -185,10 +186,2347 @@
           },
           {
             "result": {
-              "duration": 3632806312,
+              "duration": 3662958738,
               "status": "passed"
             },
-            "line": 6,
+            "line": 13,
+            "name": "user enters \"admin\" and \"Password2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password2",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 93701735,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1599042684,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the User clicks the \"Preferences\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Preferences",
+                  "offset": 21
+                }
+              ],
+              "location": "ARMStepDefinitions.the_User_clicks_the_link(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 135265294,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the \"Preferences\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Preferences",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5592144490,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user changes password by entering the old password \"Password2\" and the new password \"Password1\" and confirmed new password \"Password1\" and clicks continue",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password2",
+                  "offset": 52
+                },
+                {
+                  "val": "Password1",
+                  "offset": 85
+                },
+                {
+                  "val": "Password1",
+                  "offset": 124
+                }
+              ],
+              "location": "ARMStepDefinitions.user_changes_password(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1115155328,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), \u0027RemitOne Transfer\u0027)]\"}\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.13.0\u0027, revision: \u00272f0d292\u0027, time: \u00272018-06-25T15:24:21.231Z\u0027\nSystem info: host: \u0027SAFEEYAH\u0027, ip: \u0027192.168.0.36\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\\Users\\SAFEEY~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63191}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: 53a4630bc85bba13070f8a9986fca0df\n*** Element info: {Using\u003dxpath, value\u003d//h1[contains(text(), \u0027RemitOne Transfer\u0027)]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat StepDefinitions.ARMStepDefinitions.the_page_is_displayed(ARMStepDefinitions.java:124)\r\n\tat ✽.Then the \"RemitOne Transfer\" page is displayed(ARMAdmin.feature:18)\r\n",
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "the \"RemitOne Transfer\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "RemitOne Transfer",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4367583591,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Add Source Country",
+        "description": "",
+        "id": "arm-admin;add-source-country",
+        "after": [
+          {
+            "result": {
+              "duration": 4064658521,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2529854210,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3851149573,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 78317854,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6460301827,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user adds the source country as \"Spain : ES\" and currency as \"EUR\" and WalletEnabled is set to \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Spain : ES",
+                  "offset": 37
+                },
+                {
+                  "val": "EUR",
+                  "offset": 66
+                },
+                {
+                  "val": "No",
+                  "offset": 100
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_adds_the_source_country_as_and_currency_as_and_WalletEnabled_is_set_to(String,String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4429826137,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Add Destination Country",
+        "description": "",
+        "id": "arm-admin;add-destination-country",
+        "after": [
+          {
+            "result": {
+              "duration": 1741122048,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2691970759,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3591904877,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99138151,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19376296129,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user adds the destination country as \"Zimbabwe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Zimbabwe",
+                  "offset": 42
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_adds_the_destination_country_as(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4534883710,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Add Additional Currency to Destination Country",
+        "description": "",
+        "id": "arm-admin;add-additional-currency-to-destination-country",
+        "after": [
+          {
+            "result": {
+              "duration": 2896940143,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3002546887,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3493739354,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76230814,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11500878106,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the user adds additional currency \"Italy\" for the  country \"Zimbabwe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Italy",
+                  "offset": 35
+                },
+                {
+                  "val": "Zimbabwe",
+                  "offset": 60
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_adds_additional_currency_for_the_country(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4220831072,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Add Source Conversion Rates",
+        "description": "",
+        "id": "arm-admin;add-source-conversion-rates",
+        "after": [
+          {
+            "result": {
+              "duration": 3739999603,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3020647323,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3894525587,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 82184265,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4453931063,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user adds source destination rates for euro \"1.19681\" and usd \"1.66397\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.19681",
+                  "offset": 49
+                },
+                {
+                  "val": "1.66397",
+                  "offset": 67
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_adds_source_destination_rates_for_euro_and_usd(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4040140063,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Add Destination Conversion Rates",
+        "description": "",
+        "id": "arm-admin;add-destination-conversion-rates",
+        "after": [
+          {
+            "result": {
+              "duration": 3626997953,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3029829635,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3630048641,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77197299,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6477221213,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user adds  destination rates \"129.119\" and \"1.19681\" and \"1.66397\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "129.119",
+                  "offset": 34
+                },
+                {
+                  "val": "1.19681",
+                  "offset": 48
+                },
+                {
+                  "val": "1.66397",
+                  "offset": 62
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_adds_destination_conversion_rates(String,String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4314510123,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 58,
+        "name": "Add Delivery Bank",
+        "description": "",
+        "id": "arm-admin;add-delivery-bank;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3802797937,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3332496186,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3605033943,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 98444834,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10044198825,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user adds a deliver bank \"Janata Bank\" and \"001\" and \"Bangladesh\" and \"Dhaka\" and \"Dhaka\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Janata Bank",
+                  "offset": 26
+                },
+                {
+                  "val": "001",
+                  "offset": 44
+                },
+                {
+                  "val": "Bangladesh",
+                  "offset": 54
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 71
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 83
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_deliver_bank(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4141272621,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 59,
+        "name": "Add Delivery Bank",
+        "description": "",
+        "id": "arm-admin;add-delivery-bank;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1702121446,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3102578741,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4398450600,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 78454437,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12182498266,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user adds a deliver bank \"National Bank\" and \"002\" and \"Bangladesh\" and \"Dhaka\" and \"Dhaka\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "National Bank",
+                  "offset": 26
+                },
+                {
+                  "val": "002",
+                  "offset": 46
+                },
+                {
+                  "val": "Bangladesh",
+                  "offset": 56
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 73
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 85
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_deliver_bank(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4425566043,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 69,
+        "name": "Add Delivery Bank Branch",
+        "description": "",
+        "id": "arm-admin;add-delivery-bank-branch;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1802450569,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4715618200,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3574569122,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 71267480,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11208454399,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user adds a deliver bank branch  \"One Bank\" and \"001\" and \"Janata Bank\" and \"Dhaka\" and \"Dhaka\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "One Bank",
+                  "offset": 34
+                },
+                {
+                  "val": "001",
+                  "offset": 49
+                },
+                {
+                  "val": "Janata Bank",
+                  "offset": 59
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 77
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 89
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_deliver_bank_branch(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4049957087,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 70,
+        "name": "Add Delivery Bank Branch",
+        "description": "",
+        "id": "arm-admin;add-delivery-bank-branch;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 2651256477,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2652831682,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3654630429,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72128572,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10002161239,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user adds a deliver bank branch  \"Premier Bank\" and \"002\" and \"National Bank\" and \"Dhaka\" and \"Dhaka\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Premier Bank",
+                  "offset": 34
+                },
+                {
+                  "val": "002",
+                  "offset": 53
+                },
+                {
+                  "val": "National Bank",
+                  "offset": 63
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 83
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 95
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_deliver_bank_branch(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4865797130,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 80,
+        "name": "Add Collection Point",
+        "description": "",
+        "id": "arm-admin;add-collection-point;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1940798217,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3191961307,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3703402687,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 86915076,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10389491360,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "user adds a collection point \"Pubali Bank\" and \"Janata Bank\" and \"001\" and \"Bangladesh\" and \"MYMENSINGH\" and \"Dhaka\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Pubali Bank",
+                  "offset": 30
+                },
+                {
+                  "val": "Janata Bank",
+                  "offset": 48
+                },
+                {
+                  "val": "001",
+                  "offset": 66
+                },
+                {
+                  "val": "Bangladesh",
+                  "offset": 76
+                },
+                {
+                  "val": "MYMENSINGH",
+                  "offset": 93
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 110
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_collection_point(String,String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4255875942,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 81,
+        "name": "Add Collection Point",
+        "description": "",
+        "id": "arm-admin;add-collection-point;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1641482932,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2728372960,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3606460275,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113893935,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9491921229,
+              "error_message": "java.lang.AssertionError: Collection Point  was not added successfully\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat Pages.AddCollectionPointPage.setCollectionPoint(AddCollectionPointPage.java:94)\r\n\tat StepDefinitions.ARMStepDefinitions.user_adds_a_collection_point(ARMStepDefinitions.java:406)\r\n\tat ✽.Then user adds a collection point \"Eastern Bank\" and \"National Bank\" and \"002\" and \"Bangladesh\" and \"Dhaka\" and \"Dhaka\"(ARMAdmin.feature:76)\r\n",
+              "status": "failed"
+            },
+            "line": 76,
+            "name": "user adds a collection point \"Eastern Bank\" and \"National Bank\" and \"002\" and \"Bangladesh\" and \"Dhaka\" and \"Dhaka\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Eastern Bank",
+                  "offset": 30
+                },
+                {
+                  "val": "National Bank",
+                  "offset": 49
+                },
+                {
+                  "val": "002",
+                  "offset": 69
+                },
+                {
+                  "val": "Bangladesh",
+                  "offset": 79
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 96
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 108
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_collection_point(String,String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4361701031,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 91,
+        "name": "Add Processing Bank",
+        "description": "",
+        "id": "arm-admin;add-processing-bank;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1878131268,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10681098871,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3799823811,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 91500797,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16772933330,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "user adds a processing  bank \"City\" and \"bank\" and \"citybankBangladesh\" and \"Password2\" and \"City Bank\" and \"CB\" and \"001\" and \"45 closed city\" and \"Dhaka\" and \"Bangladesh\" and \"abayomi.alonge@remitone.com\" and \"Overview Super Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "City",
+                  "offset": 30
+                },
+                {
+                  "val": "bank",
+                  "offset": 41
+                },
+                {
+                  "val": "citybankBangladesh",
+                  "offset": 52
+                },
+                {
+                  "val": "Password2",
+                  "offset": 77
+                },
+                {
+                  "val": "City Bank",
+                  "offset": 93
+                },
+                {
+                  "val": "CB",
+                  "offset": 109
+                },
+                {
+                  "val": "001",
+                  "offset": 118
+                },
+                {
+                  "val": "45 closed city",
+                  "offset": 128
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 149
+                },
+                {
+                  "val": "Bangladesh",
+                  "offset": 161
+                },
+                {
+                  "val": "abayomi.alonge@remitone.com",
+                  "offset": 178
+                },
+                {
+                  "val": "Overview Super Bank",
+                  "offset": 212
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_processing_bank(String,String,String,String,String,String,String,String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4023008475,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 92,
+        "name": "Add Processing Bank",
+        "description": "",
+        "id": "arm-admin;add-processing-bank;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1695752100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2893288297,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3195597084,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76428365,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17061960872,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "user adds a processing  bank \"Commercial\" and \"bank\" and \"commercialbank\" and \"Password2\" and \"Commercial Bank\" and \"COMB\" and \"002\" and \"45 Charlton Road\" and \"Dhaka\" and \"Bangladesh\" and \"abayomi.alonge@remitone.com\" and \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Commercial",
+                  "offset": 30
+                },
+                {
+                  "val": "bank",
+                  "offset": 47
+                },
+                {
+                  "val": "commercialbank",
+                  "offset": 58
+                },
+                {
+                  "val": "Password2",
+                  "offset": 79
+                },
+                {
+                  "val": "Commercial Bank",
+                  "offset": 95
+                },
+                {
+                  "val": "COMB",
+                  "offset": 117
+                },
+                {
+                  "val": "002",
+                  "offset": 128
+                },
+                {
+                  "val": "45 Charlton Road",
+                  "offset": 138
+                },
+                {
+                  "val": "Dhaka",
+                  "offset": 161
+                },
+                {
+                  "val": "Bangladesh",
+                  "offset": 173
+                },
+                {
+                  "val": "abayomi.alonge@remitone.com",
+                  "offset": 190
+                },
+                {
+                  "val": "",
+                  "offset": 224
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_a_processing_bank(String,String,String,String,String,String,String,String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4274579426,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 94,
+        "name": "First Processing bank (citybankBangladesh) login and Password Change",
+        "description": "",
+        "id": "arm-admin;first-processing-bank-(citybankbangladesh)-login-and-password-change",
+        "after": [
+          {
+            "result": {
+              "duration": 3631569022,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3184922747,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4760854401,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "user enters \"citybankBangladesh\" and \"Password2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "citybankBangladesh",
+                  "offset": 13
+                },
+                {
+                  "val": "Password2",
+                  "offset": 38
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80331166,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "the \"Preferences\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Preferences",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3761623808,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "user changes password by entering the old password \"Password2\" and the new password \"Password1\" and confirmed new password \"Password1\" and clicks continue",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password2",
+                  "offset": 52
+                },
+                {
+                  "val": "Password1",
+                  "offset": 85
+                },
+                {
+                  "val": "Password1",
+                  "offset": 124
+                }
+              ],
+              "location": "ARMStepDefinitions.user_changes_password(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40412284,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "the user is displayed with the following message \"User Profile updated successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User Profile updated successfully",
+                  "offset": 50
+                }
+              ],
+              "location": "ORMStepDefinitions.the_user_is_displayed_with_the_following_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4220093331,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 101,
+        "name": "First Processing bank (commercialbank) login and Password Change",
+        "description": "",
+        "id": "arm-admin;first-processing-bank-(commercialbank)-login-and-password-change",
+        "after": [
+          {
+            "result": {
+              "duration": 3527241630,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2773553393,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4804683173,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "user enters \"commercialbank\" and \"Password2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "commercialbank",
+                  "offset": 13
+                },
+                {
+                  "val": "Password2",
+                  "offset": 34
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72523673,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "the \"Preferences\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Preferences",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3285197995,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "user changes password by entering the old password \"Password2\" and the new password \"Password1\" and confirmed new password \"Password1\" and clicks continue",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password2",
+                  "offset": 52
+                },
+                {
+                  "val": "Password1",
+                  "offset": 85
+                },
+                {
+                  "val": "Password1",
+                  "offset": 124
+                }
+              ],
+              "location": "ARMStepDefinitions.user_changes_password(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 59224940,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "the user is displayed with the following message \"User Profile updated successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User Profile updated successfully",
+                  "offset": 50
+                }
+              ],
+              "location": "ORMStepDefinitions.the_user_is_displayed_with_the_following_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4036358722,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 108,
+        "name": "Add an  Agent",
+        "description": "",
+        "id": "arm-admin;add-an--agent",
+        "after": [
+          {
+            "result": {
+              "duration": 1956240701,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3189040113,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3681417410,
+              "status": "passed"
+            },
+            "line": 110,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69190838,
+              "status": "passed"
+            },
+            "line": 111,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20910346630,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "user adds an agent",
+            "match": {
+              "location": "ARMStepDefinitions.user_adds_an_agent(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Boss Express",
+                  "Brown",
+                  "Bobby",
+                  "brownagent",
+                  "Password2",
+                  "United Kingdom",
+                  "45 Best town",
+                  "London",
+                  "Address21111",
+                  "28000",
+                  "abayomi.alonge@remitone.com",
+                  "35256236262",
+                  "42",
+                  "Yomi",
+                  "Yomi",
+                  "Yomi"
+                ],
+                "line": 113
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4180807745,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 115,
+        "name": "First Agent Valid login and Password Change",
+        "description": "",
+        "id": "arm-admin;first-agent-valid-login-and-password-change",
+        "after": [
+          {
+            "result": {
+              "duration": 3627019693,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3075627294,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4467644746,
+              "status": "passed"
+            },
+            "line": 117,
             "name": "user enters \"brownagent\" and \"Password2\"",
             "match": {
               "arguments": [
@@ -207,10 +2545,145 @@
           },
           {
             "result": {
-              "duration": 79534348,
+              "duration": 89688343,
               "status": "passed"
             },
-            "line": 7,
+            "line": 118,
+            "name": "the \"Preferences\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Preferences",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10314130145,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "user changes password by entering the old password \"Password2\" and the new password \"Password1\" and confirmed new password \"Password1\" and clicks continue",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password2",
+                  "offset": 52
+                },
+                {
+                  "val": "Password1",
+                  "offset": 85
+                },
+                {
+                  "val": "Password1",
+                  "offset": 124
+                }
+              ],
+              "location": "ARMStepDefinitions.user_changes_password(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 48242463,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "the user is displayed with the following message \"User Profile updated successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User Profile updated successfully",
+                  "offset": 50
+                }
+              ],
+              "location": "ORMStepDefinitions.the_user_is_displayed_with_the_following_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4143141316,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 122,
+        "name": "Add a member beneficiary",
+        "description": "",
+        "id": "arm-admin;add-a-member-beneficiary",
+        "after": [
+          {
+            "result": {
+              "duration": 15562055,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.13.0\u0027, revision: \u00272f0d292\u0027, time: \u00272018-06-25T15:24:21.231Z\u0027\nSystem info: host: \u0027SAFEEYAH\u0027, ip: \u0027192.168.0.36\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\\Users\\SAFEEY~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63940}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: 855e99f2bce29bc3c9f64602a7192e88\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:485)\r\n\tat Helpers.HelperFunctions.addfullScreenCaptureToExtentReport(HelperFunctions.java:294)\r\n\tat StepDefinitions.CommonStepDefinitions.TearDown(CommonStepDefinitions.java:57)\r\n\tat sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\r\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
+              "status": "failed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3469232238,
+              "status": "passed"
+            },
+            "line": 123,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4157735941,
+              "status": "passed"
+            },
+            "line": 124,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72466960,
+              "status": "passed"
+            },
+            "line": 125,
             "name": "the \"Current rate to Bangladesh\" page is displayed",
             "match": {
               "arguments": [
@@ -225,32 +2698,858 @@
           },
           {
             "result": {
-              "duration": 42058559981,
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: compliance_confirmation (tried for 15 second(s) with 500 milliseconds interval)\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)\r\n\tat Helpers.HelperFunctions.waitForElementToBecomeVisible(HelperFunctions.java:154)\r\n\tat StepDefinitions.ARMStepDefinitions.user_the_create_a_money_by_for_for_the(ARMStepDefinitions.java:551)\r\n\tat ✽.When user  the create a money \"Account Transfer\" by \"Maria\" for  \"Sadi\" for the \"90\"(Test.feature:8)\r\nCaused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: compliance_confirmation\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.13.0\u0027, revision: \u00272f0d292\u0027, time: \u00272018-06-25T15:24:21.231Z\u0027\nSystem info: host: \u0027SAFEEYAH\u0027, ip: \u0027192.168.0.36\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)\r\n\tat java.util.Optional.orElseThrow(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)\r\n\tat Helpers.HelperFunctions.waitForElementToBecomeVisible(HelperFunctions.java:154)\r\n\tat StepDefinitions.ARMStepDefinitions.user_the_create_a_money_by_for_for_the(ARMStepDefinitions.java:551)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\r\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
+              "duration": 26956664631,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.13.0\u0027, revision: \u00272f0d292\u0027, time: \u00272018-06-25T15:24:21.231Z\u0027\nSystem info: host: \u0027SAFEEYAH\u0027, ip: \u0027192.168.0.36\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\\Users\\SAFEEY~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63940}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: 855e99f2bce29bc3c9f64602a7192e88\n*** Element info: {Using\u003dlink text, value\u003dFind Bank \u0026 Branch}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)\r\n\tat org.openqa.selenium.By$ByLinkText.findElement(By.java:220)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy19.click(Unknown Source)\r\n\tat Pages.AddMemberBeneficiaryPage.addMemberBeneficiary(AddMemberBeneficiaryPage.java:232)\r\n\tat StepDefinitions.ARMStepDefinitions.user_adds_a_member_beneficiary(ARMStepDefinitions.java:467)\r\n\tat ✽.Then user adds a member beneficiary(ARMAdmin.feature:126)\r\n",
               "status": "failed"
             },
-            "line": 8,
-            "name": "user  the create a money \"Account Transfer\" by \"Maria\" for  \"Sadi\" for the \"90\"",
+            "line": 126,
+            "name": "user adds a member beneficiary",
+            "match": {
+              "location": "ARMStepDefinitions.user_adds_a_member_beneficiary(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SADI",
+                  "MANNAN",
+                  "ALLEN STREET",
+                  "BENGAZI",
+                  "Dhaka",
+                  "abayomi.alonge@remitone.com",
+                  "10000",
+                  "label\u003dPASSPORT",
+                  "595493359590",
+                  "263456",
+                  "07628664252",
+                  "12345678911",
+                  "TW9",
+                  "Dhaka",
+                  "04359392828278",
+                  "Dhaka",
+                  "Janata Bank",
+                  "National Bank",
+                  "Janata Bank",
+                  "43682472471371",
+                  "594848338",
+                  "764796963479634"
+                ],
+                "line": 127
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4410495501,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 129,
+        "name": "set agent credit",
+        "description": "",
+        "id": "arm-admin;set-agent-credit",
+        "after": [
+          {
+            "result": {
+              "duration": 2238890391,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3359761447,
+              "status": "passed"
+            },
+            "line": 130,
+            "name": "user is on the \"arm\" landing page",
             "match": {
               "arguments": [
                 {
-                  "val": "Account Transfer",
-                  "offset": 26
-                },
-                {
-                  "val": "Maria",
-                  "offset": 48
-                },
-                {
-                  "val": "Sadi",
-                  "offset": 61
-                },
-                {
-                  "val": "90",
-                  "offset": 76
+                  "val": "arm",
+                  "offset": 16
                 }
               ],
-              "location": "ARMStepDefinitions.user_the_create_a_money_by_for_for_the(String,String,String,String)"
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4749800087,
+              "status": "passed"
+            },
+            "line": 131,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75616896,
+              "status": "passed"
+            },
+            "line": 132,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4269198777,
+              "status": "passed"
+            },
+            "line": 133,
+            "name": "add agent credit \"500\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 18
+                }
+              ],
+              "location": "ARMStepDefinitions.add_agent_credit(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4386945890,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 143,
+        "name": "Add bank credit",
+        "description": "",
+        "id": "arm-admin;add-bank-credit;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 4217518560,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3596871993,
+              "status": "passed"
+            },
+            "line": 136,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3589733713,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 67769704,
+              "status": "passed"
+            },
+            "line": 138,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3962121370,
+              "status": "passed"
+            },
+            "line": 139,
+            "name": "add bank credit \"CB\" and \"100000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CB",
+                  "offset": 17
+                },
+                {
+                  "val": "100000",
+                  "offset": 26
+                }
+              ],
+              "location": "ARMStepDefinitions.add_bank_credit_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4103731906,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 144,
+        "name": "Add bank credit",
+        "description": "",
+        "id": "arm-admin;add-bank-credit;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 4399479469,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2554729960,
+              "status": "passed"
+            },
+            "line": 136,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3753502030,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72468850,
+              "status": "passed"
+            },
+            "line": 138,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4410987487,
+              "status": "passed"
+            },
+            "line": 139,
+            "name": "add bank credit \"COMB\" and \"100000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "COMB",
+                  "offset": 17
+                },
+                {
+                  "val": "100000",
+                  "offset": 28
+                }
+              ],
+              "location": "ARMStepDefinitions.add_bank_credit_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4079820277,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 146,
+        "name": "set buy rates",
+        "description": "",
+        "id": "arm-admin;set-buy-rates",
+        "after": [
+          {
+            "result": {
+              "duration": 1666006590,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2826197732,
+              "status": "passed"
+            },
+            "line": 147,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3772428584,
+              "status": "passed"
+            },
+            "line": 148,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61648950,
+              "status": "passed"
+            },
+            "line": 149,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8572202771,
+              "status": "passed"
+            },
+            "line": 150,
+            "name": "link agent to teller first name is  \"Banks\"  and last name \"moses\" and username \"bankagentteller\" and password is \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Banks",
+                  "offset": 37
+                },
+                {
+                  "val": "moses",
+                  "offset": 60
+                },
+                {
+                  "val": "bankagentteller",
+                  "offset": 81
+                },
+                {
+                  "val": "Password1",
+                  "offset": 115
+                }
+              ],
+              "location": "ARMStepDefinitions.link_agent_to_teller(String,String,String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4366737149,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 152,
+        "name": "Set Compliance limits",
+        "description": "",
+        "id": "arm-admin;set-compliance-limits",
+        "after": [
+          {
+            "result": {
+              "duration": 2208421317,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3580614731,
+              "status": "passed"
+            },
+            "line": 153,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4314590939,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 90282412,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5063198633,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "the user sets compliance limits",
+            "match": {
+              "location": "ARMStepDefinitions.the_user_sets_compliance_limits()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3797995289,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 158,
+        "name": "set bank buy rates",
+        "description": "",
+        "id": "arm-admin;set-bank-buy-rates",
+        "after": [
+          {
+            "result": {
+              "duration": 4110247760,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3684337658,
+              "status": "passed"
+            },
+            "line": 159,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4992018115,
+              "status": "passed"
+            },
+            "line": 160,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69787270,
+              "status": "passed"
+            },
+            "line": 161,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4617475836,
+              "status": "passed"
+            },
+            "line": 162,
+            "name": "the user sets buy rate one \"+0.1%\" and buy rate two \"+0.3%\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "+0.1%",
+                  "offset": 28
+                },
+                {
+                  "val": "+0.3%",
+                  "offset": 53
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_sets_buy_rate_one_and_buy_rate_two(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4206487403,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 172,
+        "name": "set commission slabs",
+        "description": "",
+        "id": "arm-admin;set-commission-slabs;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 4607841238,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3340087225,
+              "status": "passed"
+            },
+            "line": 165,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3772392666,
+              "status": "passed"
+            },
+            "line": 166,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77135387,
+              "status": "passed"
+            },
+            "line": 167,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2884400893,
+              "error_message": "java.lang.AssertionError: Commission Slabs was not  updated successfully\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat StepDefinitions.ARMStepDefinitions.the_user_sets_commission_slabs(ARMStepDefinitions.java:237)\r\n\tat ✽.Then the user sets commission slabs \"1000\" and \"10\" and \"5\" and \"1\"(ARMAdmin.feature:168)\r\n",
+              "status": "failed"
+            },
+            "line": 168,
+            "name": "the user sets commission slabs \"1000\" and \"10\" and \"5\" and \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000",
+                  "offset": 32
+                },
+                {
+                  "val": "10",
+                  "offset": 43
+                },
+                {
+                  "val": "5",
+                  "offset": 52
+                },
+                {
+                  "val": "1",
+                  "offset": 60
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_sets_commission_slabs(String,String,String,String)"
             },
             "matchedColumns": [
               0,
@@ -258,26 +3557,1060 @@
               2,
               3
             ],
-            "keyword": "When "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
             "line": 1,
-            "name": "@Test"
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4381796820,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 173,
+        "name": "set commission slabs",
+        "description": "",
+        "id": "arm-admin;set-commission-slabs;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 2826673649,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3266797453,
+              "status": "passed"
+            },
+            "line": 165,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3666763709,
+              "status": "passed"
+            },
+            "line": 166,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76172684,
+              "status": "passed"
+            },
+            "line": 167,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2797986310,
+              "error_message": "java.lang.AssertionError: Commission Slabs was not  updated successfully\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat StepDefinitions.ARMStepDefinitions.the_user_sets_commission_slabs(ARMStepDefinitions.java:237)\r\n\tat ✽.Then the user sets commission slabs \"1000\" and \"15\" and \"5\" and \"2\"(ARMAdmin.feature:168)\r\n",
+              "status": "failed"
+            },
+            "line": 168,
+            "name": "the user sets commission slabs \"1000\" and \"15\" and \"5\" and \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000",
+                  "offset": 32
+                },
+                {
+                  "val": "15",
+                  "offset": 43
+                },
+                {
+                  "val": "5",
+                  "offset": 52
+                },
+                {
+                  "val": "2",
+                  "offset": 60
+                }
+              ],
+              "location": "ARMStepDefinitions.the_user_sets_commission_slabs(String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4353221961,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 183,
+        "name": "Sell Rates Admin",
+        "description": "",
+        "id": "arm-admin;sell-rates-admin;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3053665646,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3403459305,
+              "status": "passed"
+            },
+            "line": 176,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4018217642,
+              "status": "passed"
+            },
+            "line": 177,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75005813,
+              "status": "passed"
+            },
+            "line": 178,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9544033884,
+              "status": "passed"
+            },
+            "line": 179,
+            "name": "user adds sell rates \"-0.3%\" and \"-0.4%\" for \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-0.3%",
+                  "offset": 22
+                },
+                {
+                  "val": "-0.4%",
+                  "offset": 34
+                },
+                {
+                  "val": "1",
+                  "offset": 46
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_sell_rates_and_for(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4289711406,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 184,
+        "name": "Sell Rates Admin",
+        "description": "",
+        "id": "arm-admin;sell-rates-admin;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 2670424535,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3849288913,
+              "status": "passed"
+            },
+            "line": 176,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4144562923,
+              "status": "passed"
+            },
+            "line": 177,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 93991916,
+              "status": "passed"
+            },
+            "line": 178,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4173812665,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"(//input[@name\u003d\u0027collection_rate[]\u0027])[2]\"}\n  (Session info: chrome\u003d73.0.3683.86)\n  (Driver info: chromedriver\u003d2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.13.0\u0027, revision: \u00272f0d292\u0027, time: \u00272018-06-25T15:24:21.231Z\u0027\nSystem info: host: \u0027SAFEEYAH\u0027, ip: \u0027192.168.0.36\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\\Users\\SAFEEY~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64214}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}\nSession ID: a20ae78836de4fabaf1aef84458dc553\n*** Element info: {Using\u003dxpath, value\u003d(//input[@name\u003d\u0027collection_rate[]\u0027])[2]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat StepDefinitions.ARMStepDefinitions.user_adds_sell_rates_and_for(ARMStepDefinitions.java:303)\r\n\tat ✽.Then user adds sell rates \"-0.4%\" and \"-0.5%\" for \"2\"(ARMAdmin.feature:179)\r\n",
+              "status": "failed"
+            },
+            "line": 179,
+            "name": "user adds sell rates \"-0.4%\" and \"-0.5%\" for \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-0.4%",
+                  "offset": 22
+                },
+                {
+                  "val": "-0.5%",
+                  "offset": 34
+                },
+                {
+                  "val": "2",
+                  "offset": 46
+                }
+              ],
+              "location": "ARMStepDefinitions.user_adds_sell_rates_and_for(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4295521183,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 186,
+        "name": "Logout",
+        "description": "",
+        "id": "arm-admin;logout",
+        "after": [
+          {
+            "result": {
+              "duration": 3654370968,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3375953488,
+              "status": "passed"
+            },
+            "line": 187,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5198049922,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102812683,
+              "status": "passed"
+            },
+            "line": 189,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 986119486,
+              "status": "passed"
+            },
+            "line": 190,
+            "name": "user clicks the logout link",
+            "match": {
+              "location": "ARMStepDefinitions.user_clicks_the_logout_link()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4073568138,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 200,
+        "name": "Add WS Admin Users",
+        "description": "",
+        "id": "arm-admin;add-ws-admin-users;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3660200594,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3026637164,
+              "status": "passed"
+            },
+            "line": 193,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3595740568,
+              "status": "passed"
+            },
+            "line": 194,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 126142531,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5813737879,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "set webservice user \"wsagent12\" and \"Password12\" and \"Admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wsagent12",
+                  "offset": 21
+                },
+                {
+                  "val": "Password12",
+                  "offset": 37
+                },
+                {
+                  "val": "Admin",
+                  "offset": 54
+                }
+              ],
+              "location": "ARMStepDefinitions.set_webservice_user_and_and(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4222374140,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 201,
+        "name": "Add WS Admin Users",
+        "description": "",
+        "id": "arm-admin;add-ws-admin-users;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 3813135777,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3258838725,
+              "status": "passed"
+            },
+            "line": 193,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5168845549,
+              "status": "passed"
+            },
+            "line": 194,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 68531548,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5676712119,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "set webservice user \"wsagent12\" and \"Password12\" and \"bobby\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wsagent12",
+                  "offset": 21
+                },
+                {
+                  "val": "Password12",
+                  "offset": 37
+                },
+                {
+                  "val": "bobby",
+                  "offset": 54
+                }
+              ],
+              "location": "ARMStepDefinitions.set_webservice_user_and_and(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4232599026,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 202,
+        "name": "Add WS Admin Users",
+        "description": "",
+        "id": "arm-admin;add-ws-admin-users;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 4101133031,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3045678090,
+              "status": "passed"
+            },
+            "line": 193,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4508273485,
+              "status": "passed"
+            },
+            "line": 194,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75401859,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5271041951,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "set webservice user \"wsbank11\" and \"Password12\" and \"city bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wsbank11",
+                  "offset": 21
+                },
+                {
+                  "val": "Password12",
+                  "offset": 36
+                },
+                {
+                  "val": "city bank",
+                  "offset": 53
+                }
+              ],
+              "location": "ARMStepDefinitions.set_webservice_user_and_and(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4329967731,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.setup()"
+            }
+          }
+        ],
+        "line": 203,
+        "name": "Add WS Admin Users",
+        "description": "",
+        "id": "arm-admin;add-ws-admin-users;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 2220879279,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CommonStepDefinitions.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2533002728,
+              "status": "passed"
+            },
+            "line": 193,
+            "name": "user is on the \"arm\" landing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arm",
+                  "offset": 16
+                }
+              ],
+              "location": "ARMStepDefinitions.user_is_on_the_landing_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4060502402,
+              "status": "passed"
+            },
+            "line": 194,
+            "name": "user enters \"admin\" and \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 13
+                },
+                {
+                  "val": "Password1",
+                  "offset": 25
+                }
+              ],
+              "location": "ARMStepDefinitions.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80161027,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "the \"Current rate to Bangladesh\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Current rate to Bangladesh",
+                  "offset": 5
+                }
+              ],
+              "location": "ARMStepDefinitions.the_page_is_displayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6373233153,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "set webservice user \"wsbank12\" and \"Password12\" and \"commercial bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wsbank12",
+                  "offset": 21
+                },
+                {
+                  "val": "Password12",
+                  "offset": 36
+                },
+                {
+                  "val": "commercial bank",
+                  "offset": 53
+                }
+              ],
+              "location": "ARMStepDefinitions.set_webservice_user_and_and(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FullRegression"
+          },
+          {
+            "line": 1,
+            "name": "@ARMAdmin"
           }
         ]
       }
     ],
-    "name": "Test",
+    "name": "ARM Admin",
     "description": "",
-    "id": "test",
+    "id": "arm-admin",
     "keyword": "Feature",
-    "uri": "Test.feature",
+    "uri": "ARMAdmin.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Test"
+        "name": "@FullRegression"
+      },
+      {
+        "line": 1,
+        "name": "@ARMAdmin"
       }
     ]
   }

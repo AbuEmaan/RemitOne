@@ -5,7 +5,7 @@ Feature: ARM Admin
     Given user is on the "arm" landing page
     When user enters "admin" and "remitone"
     Then the "Preferences" page is displayed
-    When user changes password by entering the old password "remitone" and the new password "Password2" and confirmed new password "Password1" and clicks continue
+    When user changes password by entering the old password "remitone" and the new password "Password2" and confirmed new password "Password2" and clicks continue
     Then the user is displayed with the following message "User Profile updated successfully"
 
   Scenario: Admin Preferences - Change Password

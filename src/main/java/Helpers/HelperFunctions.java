@@ -6,19 +6,27 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 //import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.IllegalFormatException;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import java.util.TimeZone;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -27,103 +35,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cucumber.listener.Reporter;
 
-import java.util.Properties;
-import java.util.Date;
-import java.util.IllegalFormatException;
-
 import managers.FileReaderManager;
-
-import java.awt.AWTException;
-
-import java.awt.Robot;
-
-import java.awt.Toolkit;
-
-import java.awt.datatransfer.StringSelection;
-
-import java.awt.event.KeyEvent;
-
-import java.awt.image.BufferedImage;
-
-import java.io.BufferedReader;
-
-import java.io.File;
-
-import java.io.FileInputStream;
-
-import java.io.FileOutputStream;
-
-import java.io.FileReader;
-
-import java.io.FileWriter;
-
-import java.io.IOException;
-
-import java.io.InputStream;
-
-import java.util.ArrayList;
-
-import java.util.Date;
-
-import java.util.List;
-
-import java.util.Map;
-
-import java.util.Properties;
-
-import java.util.Set;
-
-import java.util.concurrent.TimeUnit;
-
-import javax.imageio.ImageIO;
-
-import javax.tools.JavaFileObject;
-
-import org.apache.commons.io.FileUtils;
-
-import org.junit.Assert;
-
-import org.openqa.selenium.By;
-
-import org.openqa.selenium.JavascriptExecutor;
-
-import org.openqa.selenium.Keys;
-
-import org.openqa.selenium.NoSuchElementException;
-
-import org.openqa.selenium.OutputType;
-
-import org.openqa.selenium.TakesScreenshot;
-
-import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.WebDriverException;
-
-import org.openqa.selenium.WebElement;
-
-import org.openqa.selenium.logging.LogEntries;
-
-import org.openqa.selenium.logging.LogEntry;
-
-import org.openqa.selenium.logging.LogType;
-
-import org.openqa.selenium.support.ui.ExpectedCondition;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import org.openqa.selenium.support.ui.Wait;
-
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import gherkin.deps.com.google.gson.JsonObject;
-
-import com.cucumber.listener.Reporter;
-
-import com.google.gson.Gson;
-
-import com.google.gson.GsonBuilder;
-
-import com.google.gson.JsonParser;
 
 public class HelperFunctions {
 
@@ -133,7 +45,7 @@ public class HelperFunctions {
 		for (String eachwindow : allwindow) {
 
 			System.out.println(eachwindow);
-			//driver.switchTo().window(eachwindow);
+			// driver.switchTo().window(eachwindow);
 
 		}
 
@@ -381,7 +293,8 @@ public class HelperFunctions {
 
 			jexec.executeScript("window.scrollTo(0,0)"); // will scroll to (0,0)
 
-			Boolean isScrollBarPresent =  (Boolean) jexec.executeScript("return document.documentElement.scrollHeight>document.documentElement.clientHeight");
+			Boolean isScrollBarPresent = (Boolean) jexec.executeScript(
+					"return document.documentElement.scrollHeight>document.documentElement.clientHeight");
 			Long scrollHeight = (Long) jexec.executeScript("return document.documentElement.scrollHeight");
 			Long clientHeight = (Long) jexec.executeScript("return document.documentElement.clientHeight");
 
@@ -485,8 +398,6 @@ public class HelperFunctions {
 
 	}
 
-
-
 	public void addCurrentScreenCaptureWOScrolling(final WebDriver driver)
 
 			throws IllegalFormatException {
@@ -525,6 +436,25 @@ public class HelperFunctions {
 
 		}
 
+	}
+
+	public long returnPageLoadTime(WebDriver driver, String url) {
+
+		StopWatch pageLoad = new StopWatch();
+		pageLoad.start();
+	
+		driver.get(url);
+		// Wait for the required any element (I am waiting for Login button in fb)
+		// WebDriverWait wait = new WebDriverWait(driver, 10);
+		// wait.until(ExpectedConditions.presenceOfElementLocated(By.id("u_0_l")));
+
+		pageLoad.stop();
+		// Get the time
+		long pageLoadTime_ms = pageLoad.getTime();
+		long pageLoadTime_Seconds = pageLoadTime_ms / 1000;
+		System.out.println("Total Page Load Time: " + pageLoadTime_ms + " milliseconds");
+		System.out.println("Total Page Load Time: " + pageLoadTime_Seconds + " seconds");
+		return pageLoadTime_Seconds;
 	}
 
 }

@@ -1,21 +1,71 @@
 [
   {
-    "source": "^user enters \"([^\"]*)\" and \"([^\"]*)\"$",
+    "source": "^the user adds  destination rates \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$",
     "steps": [
       {
-        "name": "user enters \"brownagent\" and \"Password2\"",
+        "name": "the user adds  destination rates \"129.119\" and \"1.19681\" and \"1.66397\"",
         "aggregatedDurations": {
-          "average": 3.775613257,
-          "median": 3.775613257
+          "average": 6.477221213,
+          "median": 6.477221213
         },
         "durations": [
           {
-            "duration": 3.918420202,
-            "location": "Test.feature:6"
-          },
+            "duration": 6.477221213,
+            "location": "ARMAdmin.feature:48"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds an agent$",
+    "steps": [
+      {
+        "name": "user adds an agent",
+        "aggregatedDurations": {
+          "average": 20.91034663,
+          "median": 20.91034663
+        },
+        "durations": [
           {
-            "duration": 3.632806312,
-            "location": "Test.feature:6"
+            "duration": 20.91034663,
+            "location": "ARMAdmin.feature:112"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user adds additional currency \"([^\"]*)\" for the  country \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "the user adds additional currency \"Italy\" for the  country \"Zimbabwe\"",
+        "aggregatedDurations": {
+          "average": 11.500878106,
+          "median": 11.500878106
+        },
+        "durations": [
+          {
+            "duration": 11.500878106,
+            "location": "ARMAdmin.feature:36"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user adds the destination country as \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "the user adds the destination country as \"Zimbabwe\"",
+        "aggregatedDurations": {
+          "average": 19.376296129,
+          "median": 19.376296129
+        },
+        "durations": [
+          {
+            "duration": 19.376296129,
+            "location": "ARMAdmin.feature:30"
           }
         ]
       }
@@ -27,17 +77,725 @@
       {
         "name": "user is on the \"arm\" landing page",
         "aggregatedDurations": {
-          "average": 3.199991871,
-          "median": 3.199991871
+          "average": 3.3829793,
+          "median": 3.184922747
         },
         "durations": [
           {
-            "duration": 3.564607479,
-            "location": "Test.feature:5"
+            "duration": 3.396761025,
+            "location": "ARMAdmin.feature:5"
           },
           {
-            "duration": 2.835376263,
-            "location": "Test.feature:5"
+            "duration": 3.039787023,
+            "location": "ARMAdmin.feature:12"
+          },
+          {
+            "duration": 2.52985421,
+            "location": "ARMAdmin.feature:21"
+          },
+          {
+            "duration": 2.691970759,
+            "location": "ARMAdmin.feature:27"
+          },
+          {
+            "duration": 3.002546887,
+            "location": "ARMAdmin.feature:33"
+          },
+          {
+            "duration": 3.020647323,
+            "location": "ARMAdmin.feature:39"
+          },
+          {
+            "duration": 3.029829635,
+            "location": "ARMAdmin.feature:45"
+          },
+          {
+            "duration": 3.332496186,
+            "location": "ARMAdmin.feature:51"
+          },
+          {
+            "duration": 3.102578741,
+            "location": "ARMAdmin.feature:51"
+          },
+          {
+            "duration": 4.7156182,
+            "location": "ARMAdmin.feature:62"
+          },
+          {
+            "duration": 2.652831682,
+            "location": "ARMAdmin.feature:62"
+          },
+          {
+            "duration": 3.191961307,
+            "location": "ARMAdmin.feature:73"
+          },
+          {
+            "duration": 2.72837296,
+            "location": "ARMAdmin.feature:73"
+          },
+          {
+            "duration": 10.681098871,
+            "location": "ARMAdmin.feature:84"
+          },
+          {
+            "duration": 2.893288297,
+            "location": "ARMAdmin.feature:84"
+          },
+          {
+            "duration": 3.184922747,
+            "location": "ARMAdmin.feature:95"
+          },
+          {
+            "duration": 2.773553393,
+            "location": "ARMAdmin.feature:102"
+          },
+          {
+            "duration": 3.189040113,
+            "location": "ARMAdmin.feature:109"
+          },
+          {
+            "duration": 3.075627294,
+            "location": "ARMAdmin.feature:116"
+          },
+          {
+            "duration": 3.469232238,
+            "location": "ARMAdmin.feature:123"
+          },
+          {
+            "duration": 3.359761447,
+            "location": "ARMAdmin.feature:130"
+          },
+          {
+            "duration": 3.596871993,
+            "location": "ARMAdmin.feature:136"
+          },
+          {
+            "duration": 2.55472996,
+            "location": "ARMAdmin.feature:136"
+          },
+          {
+            "duration": 2.826197732,
+            "location": "ARMAdmin.feature:147"
+          },
+          {
+            "duration": 3.580614731,
+            "location": "ARMAdmin.feature:153"
+          },
+          {
+            "duration": 3.684337658,
+            "location": "ARMAdmin.feature:159"
+          },
+          {
+            "duration": 3.340087225,
+            "location": "ARMAdmin.feature:165"
+          },
+          {
+            "duration": 3.266797453,
+            "location": "ARMAdmin.feature:165"
+          },
+          {
+            "duration": 3.403459305,
+            "location": "ARMAdmin.feature:176"
+          },
+          {
+            "duration": 3.849288913,
+            "location": "ARMAdmin.feature:176"
+          },
+          {
+            "duration": 3.375953488,
+            "location": "ARMAdmin.feature:187"
+          },
+          {
+            "duration": 3.026637164,
+            "location": "ARMAdmin.feature:193"
+          },
+          {
+            "duration": 3.258838725,
+            "location": "ARMAdmin.feature:193"
+          },
+          {
+            "duration": 3.04567809,
+            "location": "ARMAdmin.feature:193"
+          },
+          {
+            "duration": 2.533002728,
+            "location": "ARMAdmin.feature:193"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user adds the source country as \"([^\"]*)\" and currency as \"([^\"]*)\" and WalletEnabled is set to \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "the user adds the source country as \"Spain : ES\" and currency as \"EUR\" and WalletEnabled is set to \"No\"",
+        "aggregatedDurations": {
+          "average": 6.460301827,
+          "median": 6.460301827
+        },
+        "durations": [
+          {
+            "duration": 6.460301827,
+            "location": "ARMAdmin.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user changes password by entering the old password \"([^\"]*)\" and the new password \"([^\"]*)\" and confirmed new password \"([^\"]*)\" and clicks continue$",
+    "steps": [
+      {
+        "name": "user changes password by entering the old password \"remitone\" and the new password \"Password2\" and confirmed new password \"Password2\" and clicks continue",
+        "aggregatedDurations": {
+          "average": 4.260346819,
+          "median": 4.260346819
+        },
+        "durations": [
+          {
+            "duration": 4.260346819,
+            "location": "ARMAdmin.feature:8"
+          }
+        ]
+      },
+      {
+        "name": "user changes password by entering the old password \"Password2\" and the new password \"Password1\" and confirmed new password \"Password1\" and clicks continue",
+        "aggregatedDurations": {
+          "average": 5.738274109,
+          "median": 4.676884149
+        },
+        "durations": [
+          {
+            "duration": 5.59214449,
+            "location": "ARMAdmin.feature:17"
+          },
+          {
+            "duration": 3.761623808,
+            "location": "ARMAdmin.feature:98"
+          },
+          {
+            "duration": 3.285197995,
+            "location": "ARMAdmin.feature:105"
+          },
+          {
+            "duration": 10.314130145,
+            "location": "ARMAdmin.feature:119"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user adds source destination rates for euro \"([^\"]*)\" and usd \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "the user adds source destination rates for euro \"1.19681\" and usd \"1.66397\"",
+        "aggregatedDurations": {
+          "average": 4.453931063,
+          "median": 4.453931063
+        },
+        "durations": [
+          {
+            "duration": 4.453931063,
+            "location": "ARMAdmin.feature:42"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user clicks the logout link$",
+    "steps": [
+      {
+        "name": "user clicks the logout link",
+        "aggregatedDurations": {
+          "average": 0.986119486,
+          "median": 0.986119486
+        },
+        "durations": [
+          {
+            "duration": 0.986119486,
+            "location": "ARMAdmin.feature:190"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user is displayed with the following message \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "the user is displayed with the following message \"User Profile updated successfully\"",
+        "aggregatedDurations": {
+          "average": 0.059142824,
+          "median": 0.053733701
+        },
+        "durations": [
+          {
+            "duration": 0.088691612,
+            "location": "ARMAdmin.feature:9"
+          },
+          {
+            "duration": 0.040412284,
+            "location": "ARMAdmin.feature:99"
+          },
+          {
+            "duration": 0.05922494,
+            "location": "ARMAdmin.feature:106"
+          },
+          {
+            "duration": 0.048242463,
+            "location": "ARMAdmin.feature:120"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the User clicks the \"([^\"]*)\" link$",
+    "steps": [
+      {
+        "name": "the User clicks the \"Preferences\" link",
+        "aggregatedDurations": {
+          "average": 1.599042684,
+          "median": 1.599042684
+        },
+        "durations": [
+          {
+            "duration": 1.599042684,
+            "location": "ARMAdmin.feature:15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^link agent to teller first name is  \"([^\"]*)\"  and last name \"([^\"]*)\" and username \"([^\"]*)\" and password is \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "link agent to teller first name is  \"Banks\"  and last name \"moses\" and username \"bankagentteller\" and password is \"Password1\"",
+        "aggregatedDurations": {
+          "average": 8.572202771,
+          "median": 8.572202771
+        },
+        "durations": [
+          {
+            "duration": 8.572202771,
+            "location": "ARMAdmin.feature:150"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds a deliver bank branch  \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user adds a deliver bank branch  \"One Bank\" and \"001\" and \"Janata Bank\" and \"Dhaka\" and \"Dhaka\"",
+        "aggregatedDurations": {
+          "average": 11.208454399,
+          "median": 11.208454399
+        },
+        "durations": [
+          {
+            "duration": 11.208454399,
+            "location": "ARMAdmin.feature:65"
+          }
+        ]
+      },
+      {
+        "name": "user adds a deliver bank branch  \"Premier Bank\" and \"002\" and \"National Bank\" and \"Dhaka\" and \"Dhaka\"",
+        "aggregatedDurations": {
+          "average": 10.002161239,
+          "median": 10.002161239
+        },
+        "durations": [
+          {
+            "duration": 10.002161239,
+            "location": "ARMAdmin.feature:65"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^add bank credit \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "add bank credit \"CB\" and \"100000\"",
+        "aggregatedDurations": {
+          "average": 3.96212137,
+          "median": 3.96212137
+        },
+        "durations": [
+          {
+            "duration": 3.96212137,
+            "location": "ARMAdmin.feature:139"
+          }
+        ]
+      },
+      {
+        "name": "add bank credit \"COMB\" and \"100000\"",
+        "aggregatedDurations": {
+          "average": 4.410987487,
+          "median": 4.410987487
+        },
+        "durations": [
+          {
+            "duration": 4.410987487,
+            "location": "ARMAdmin.feature:139"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user sets compliance limits$",
+    "steps": [
+      {
+        "name": "the user sets compliance limits",
+        "aggregatedDurations": {
+          "average": 5.063198633,
+          "median": 5.063198633
+        },
+        "durations": [
+          {
+            "duration": 5.063198633,
+            "location": "ARMAdmin.feature:156"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user enters \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user enters \"admin\" and \"remitone\"",
+        "aggregatedDurations": {
+          "average": 5.406280779,
+          "median": 5.406280779
+        },
+        "durations": [
+          {
+            "duration": 5.406280779,
+            "location": "ARMAdmin.feature:6"
+          }
+        ]
+      },
+      {
+        "name": "user enters \"admin\" and \"Password2\"",
+        "aggregatedDurations": {
+          "average": 3.662958738,
+          "median": 3.662958738
+        },
+        "durations": [
+          {
+            "duration": 3.662958738,
+            "location": "ARMAdmin.feature:13"
+          }
+        ]
+      },
+      {
+        "name": "user enters \"admin\" and \"Password1\"",
+        "aggregatedDurations": {
+          "average": 3.971463722,
+          "median": 3.772410625
+        },
+        "durations": [
+          {
+            "duration": 3.851149573,
+            "location": "ARMAdmin.feature:22"
+          },
+          {
+            "duration": 3.591904877,
+            "location": "ARMAdmin.feature:28"
+          },
+          {
+            "duration": 3.493739354,
+            "location": "ARMAdmin.feature:34"
+          },
+          {
+            "duration": 3.894525587,
+            "location": "ARMAdmin.feature:40"
+          },
+          {
+            "duration": 3.630048641,
+            "location": "ARMAdmin.feature:46"
+          },
+          {
+            "duration": 3.605033943,
+            "location": "ARMAdmin.feature:52"
+          },
+          {
+            "duration": 4.3984506,
+            "location": "ARMAdmin.feature:52"
+          },
+          {
+            "duration": 3.574569122,
+            "location": "ARMAdmin.feature:63"
+          },
+          {
+            "duration": 3.654630429,
+            "location": "ARMAdmin.feature:63"
+          },
+          {
+            "duration": 3.703402687,
+            "location": "ARMAdmin.feature:74"
+          },
+          {
+            "duration": 3.606460275,
+            "location": "ARMAdmin.feature:74"
+          },
+          {
+            "duration": 3.799823811,
+            "location": "ARMAdmin.feature:85"
+          },
+          {
+            "duration": 3.195597084,
+            "location": "ARMAdmin.feature:85"
+          },
+          {
+            "duration": 3.68141741,
+            "location": "ARMAdmin.feature:110"
+          },
+          {
+            "duration": 4.157735941,
+            "location": "ARMAdmin.feature:124"
+          },
+          {
+            "duration": 4.749800087,
+            "location": "ARMAdmin.feature:131"
+          },
+          {
+            "duration": 3.589733713,
+            "location": "ARMAdmin.feature:137"
+          },
+          {
+            "duration": 3.75350203,
+            "location": "ARMAdmin.feature:137"
+          },
+          {
+            "duration": 3.772428584,
+            "location": "ARMAdmin.feature:148"
+          },
+          {
+            "duration": 4.314590939,
+            "location": "ARMAdmin.feature:154"
+          },
+          {
+            "duration": 4.992018115,
+            "location": "ARMAdmin.feature:160"
+          },
+          {
+            "duration": 3.772392666,
+            "location": "ARMAdmin.feature:166"
+          },
+          {
+            "duration": 3.666763709,
+            "location": "ARMAdmin.feature:166"
+          },
+          {
+            "duration": 4.018217642,
+            "location": "ARMAdmin.feature:177"
+          },
+          {
+            "duration": 4.144562923,
+            "location": "ARMAdmin.feature:177"
+          },
+          {
+            "duration": 5.198049922,
+            "location": "ARMAdmin.feature:188"
+          },
+          {
+            "duration": 3.595740568,
+            "location": "ARMAdmin.feature:194"
+          },
+          {
+            "duration": 5.168845549,
+            "location": "ARMAdmin.feature:194"
+          },
+          {
+            "duration": 4.508273485,
+            "location": "ARMAdmin.feature:194"
+          },
+          {
+            "duration": 4.060502402,
+            "location": "ARMAdmin.feature:194"
+          }
+        ]
+      },
+      {
+        "name": "user enters \"citybankBangladesh\" and \"Password2\"",
+        "aggregatedDurations": {
+          "average": 4.760854401,
+          "median": 4.760854401
+        },
+        "durations": [
+          {
+            "duration": 4.760854401,
+            "location": "ARMAdmin.feature:96"
+          }
+        ]
+      },
+      {
+        "name": "user enters \"commercialbank\" and \"Password2\"",
+        "aggregatedDurations": {
+          "average": 4.804683173,
+          "median": 4.804683173
+        },
+        "durations": [
+          {
+            "duration": 4.804683173,
+            "location": "ARMAdmin.feature:103"
+          }
+        ]
+      },
+      {
+        "name": "user enters \"brownagent\" and \"Password2\"",
+        "aggregatedDurations": {
+          "average": 4.467644746,
+          "median": 4.467644746
+        },
+        "durations": [
+          {
+            "duration": 4.467644746,
+            "location": "ARMAdmin.feature:117"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^add agent credit \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "add agent credit \"500\"",
+        "aggregatedDurations": {
+          "average": 4.269198777,
+          "median": 4.269198777
+        },
+        "durations": [
+          {
+            "duration": 4.269198777,
+            "location": "ARMAdmin.feature:133"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds sell rates \"([^\"]*)\" and \"([^\"]*)\" for \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user adds sell rates \"-0.3%\" and \"-0.4%\" for \"1\"",
+        "aggregatedDurations": {
+          "average": 9.544033884,
+          "median": 9.544033884
+        },
+        "durations": [
+          {
+            "duration": 9.544033884,
+            "location": "ARMAdmin.feature:179"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds a collection point \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user adds a collection point \"Pubali Bank\" and \"Janata Bank\" and \"001\" and \"Bangladesh\" and \"MYMENSINGH\" and \"Dhaka\"",
+        "aggregatedDurations": {
+          "average": 10.38949136,
+          "median": 10.38949136
+        },
+        "durations": [
+          {
+            "duration": 10.38949136,
+            "location": "ARMAdmin.feature:76"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds a processing  bank \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user adds a processing  bank \"City\" and \"bank\" and \"citybankBangladesh\" and \"Password2\" and \"City Bank\" and \"CB\" and \"001\" and \"45 closed city\" and \"Dhaka\" and \"Bangladesh\" and \"abayomi.alonge@remitone.com\" and \"Overview Super Bank\"",
+        "aggregatedDurations": {
+          "average": 16.77293333,
+          "median": 16.77293333
+        },
+        "durations": [
+          {
+            "duration": 16.77293333,
+            "location": "ARMAdmin.feature:87"
+          }
+        ]
+      },
+      {
+        "name": "user adds a processing  bank \"Commercial\" and \"bank\" and \"commercialbank\" and \"Password2\" and \"Commercial Bank\" and \"COMB\" and \"002\" and \"45 Charlton Road\" and \"Dhaka\" and \"Bangladesh\" and \"abayomi.alonge@remitone.com\" and \"\"",
+        "aggregatedDurations": {
+          "average": 17.061960872,
+          "median": 17.061960872
+        },
+        "durations": [
+          {
+            "duration": 17.061960872,
+            "location": "ARMAdmin.feature:87"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds a deliver bank \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user adds a deliver bank \"Janata Bank\" and \"001\" and \"Bangladesh\" and \"Dhaka\" and \"Dhaka\"",
+        "aggregatedDurations": {
+          "average": 10.044198825,
+          "median": 10.044198825
+        },
+        "durations": [
+          {
+            "duration": 10.044198825,
+            "location": "ARMAdmin.feature:54"
+          }
+        ]
+      },
+      {
+        "name": "user adds a deliver bank \"National Bank\" and \"002\" and \"Bangladesh\" and \"Dhaka\" and \"Dhaka\"",
+        "aggregatedDurations": {
+          "average": 12.182498266,
+          "median": 12.182498266
+        },
+        "durations": [
+          {
+            "duration": 12.182498266,
+            "location": "ARMAdmin.feature:54"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the user sets buy rate one \"([^\"]*)\" and buy rate two \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "the user sets buy rate one \"+0.1%\" and buy rate two \"+0.3%\"",
+        "aggregatedDurations": {
+          "average": 4.617475836,
+          "median": 4.617475836
+        },
+        "durations": [
+          {
+            "duration": 4.617475836,
+            "location": "ARMAdmin.feature:162"
           }
         ]
       }
@@ -47,19 +805,221 @@
     "source": "^the \"([^\"]*)\" page is displayed$",
     "steps": [
       {
-        "name": "the \"Current rate to Bangladesh\" page is displayed",
+        "name": "the \"Preferences\" page is displayed",
         "aggregatedDurations": {
-          "average": 0.101464094,
-          "median": 0.101464094
+          "average": 0.094821344,
+          "median": 0.089688343
         },
         "durations": [
           {
-            "duration": 0.12339384,
-            "location": "Test.feature:7"
+            "duration": 0.096298246,
+            "location": "ARMAdmin.feature:7"
           },
           {
-            "duration": 0.079534348,
-            "location": "Test.feature:7"
+            "duration": 0.135265294,
+            "location": "ARMAdmin.feature:16"
+          },
+          {
+            "duration": 0.080331166,
+            "location": "ARMAdmin.feature:97"
+          },
+          {
+            "duration": 0.072523673,
+            "location": "ARMAdmin.feature:104"
+          },
+          {
+            "duration": 0.089688343,
+            "location": "ARMAdmin.feature:118"
+          }
+        ]
+      },
+      {
+        "name": "the \"Current rate to Bangladesh\" page is displayed",
+        "aggregatedDurations": {
+          "average": 0.082270675,
+          "median": 0.077135387
+        },
+        "durations": [
+          {
+            "duration": 0.093701735,
+            "location": "ARMAdmin.feature:14"
+          },
+          {
+            "duration": 0.078317854,
+            "location": "ARMAdmin.feature:23"
+          },
+          {
+            "duration": 0.099138151,
+            "location": "ARMAdmin.feature:29"
+          },
+          {
+            "duration": 0.076230814,
+            "location": "ARMAdmin.feature:35"
+          },
+          {
+            "duration": 0.082184265,
+            "location": "ARMAdmin.feature:41"
+          },
+          {
+            "duration": 0.077197299,
+            "location": "ARMAdmin.feature:47"
+          },
+          {
+            "duration": 0.098444834,
+            "location": "ARMAdmin.feature:53"
+          },
+          {
+            "duration": 0.078454437,
+            "location": "ARMAdmin.feature:53"
+          },
+          {
+            "duration": 0.07126748,
+            "location": "ARMAdmin.feature:64"
+          },
+          {
+            "duration": 0.072128572,
+            "location": "ARMAdmin.feature:64"
+          },
+          {
+            "duration": 0.086915076,
+            "location": "ARMAdmin.feature:75"
+          },
+          {
+            "duration": 0.113893935,
+            "location": "ARMAdmin.feature:75"
+          },
+          {
+            "duration": 0.091500797,
+            "location": "ARMAdmin.feature:86"
+          },
+          {
+            "duration": 0.076428365,
+            "location": "ARMAdmin.feature:86"
+          },
+          {
+            "duration": 0.069190838,
+            "location": "ARMAdmin.feature:111"
+          },
+          {
+            "duration": 0.07246696,
+            "location": "ARMAdmin.feature:125"
+          },
+          {
+            "duration": 0.075616896,
+            "location": "ARMAdmin.feature:132"
+          },
+          {
+            "duration": 0.067769704,
+            "location": "ARMAdmin.feature:138"
+          },
+          {
+            "duration": 0.07246885,
+            "location": "ARMAdmin.feature:138"
+          },
+          {
+            "duration": 0.06164895,
+            "location": "ARMAdmin.feature:149"
+          },
+          {
+            "duration": 0.090282412,
+            "location": "ARMAdmin.feature:155"
+          },
+          {
+            "duration": 0.06978727,
+            "location": "ARMAdmin.feature:161"
+          },
+          {
+            "duration": 0.077135387,
+            "location": "ARMAdmin.feature:167"
+          },
+          {
+            "duration": 0.076172684,
+            "location": "ARMAdmin.feature:167"
+          },
+          {
+            "duration": 0.075005813,
+            "location": "ARMAdmin.feature:178"
+          },
+          {
+            "duration": 0.093991916,
+            "location": "ARMAdmin.feature:178"
+          },
+          {
+            "duration": 0.102812683,
+            "location": "ARMAdmin.feature:189"
+          },
+          {
+            "duration": 0.126142531,
+            "location": "ARMAdmin.feature:195"
+          },
+          {
+            "duration": 0.068531548,
+            "location": "ARMAdmin.feature:195"
+          },
+          {
+            "duration": 0.075401859,
+            "location": "ARMAdmin.feature:195"
+          },
+          {
+            "duration": 0.080161027,
+            "location": "ARMAdmin.feature:195"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^set webservice user \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "set webservice user \"wsagent12\" and \"Password12\" and \"Admin\"",
+        "aggregatedDurations": {
+          "average": 5.813737879,
+          "median": 5.813737879
+        },
+        "durations": [
+          {
+            "duration": 5.813737879,
+            "location": "ARMAdmin.feature:196"
+          }
+        ]
+      },
+      {
+        "name": "set webservice user \"wsagent12\" and \"Password12\" and \"bobby\"",
+        "aggregatedDurations": {
+          "average": 5.676712119,
+          "median": 5.676712119
+        },
+        "durations": [
+          {
+            "duration": 5.676712119,
+            "location": "ARMAdmin.feature:196"
+          }
+        ]
+      },
+      {
+        "name": "set webservice user \"wsbank11\" and \"Password12\" and \"city bank\"",
+        "aggregatedDurations": {
+          "average": 5.271041951,
+          "median": 5.271041951
+        },
+        "durations": [
+          {
+            "duration": 5.271041951,
+            "location": "ARMAdmin.feature:196"
+          }
+        ]
+      },
+      {
+        "name": "set webservice user \"wsbank12\" and \"Password12\" and \"commercial bank\"",
+        "aggregatedDurations": {
+          "average": 6.373233153,
+          "median": 6.373233153
+        },
+        "durations": [
+          {
+            "duration": 6.373233153,
+            "location": "ARMAdmin.feature:196"
           }
         ]
       }
